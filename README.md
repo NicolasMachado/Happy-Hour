@@ -1,2 +1,2 @@
 # Happy-Hour
-Happy Hour is a game I have created in Game Maker.
+Create and manage your bar in Happy Hour, a PC game created with Game Maker.
