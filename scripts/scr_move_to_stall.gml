@@ -15,6 +15,6 @@ if !moving {
         }
     } else {
         scr_action_pause(50, "nopath");
-        show_debug_message("FUCK! Where's the bathroom gone???");
+        show_debug_message("Where's the bathroom gone???");
     }
 }
