@@ -28,6 +28,7 @@
             <string>/// INIT
 
 fading = false;
+hovercolor = make_color_rgb(230, 230, 240);
 </string>
           </argument>
         </arguments>
@@ -83,7 +84,7 @@ global.isfading = true;
 draw_self();
 
 if collision_point(mouse_x, mouse_y, self, false, false) {
-    image_blend = make_color_rgb(220, 220, 250);
+    image_blend = hovercolor;
 } else {
     image_blend = c_white;
 }
