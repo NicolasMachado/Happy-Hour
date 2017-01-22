@@ -16,6 +16,6 @@ if !moving {
         
     } else {
         scr_action_pause(50, "nopath");
-        show_debug_message("FUCK! Stuck in bathroom");
+        show_debug_message("Stuck in bathroom");
     }
 }
