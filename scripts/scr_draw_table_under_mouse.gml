@@ -20,7 +20,7 @@ spry = floor((mouse_y - decaly - sprheight/2 + 16 + decaly)/32)*32;
     
 // set transparency color according to collision
 var color = c_white;
-if collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_toavoid, false, false) || scr_item_get_price(global.selecteditem) > global.money {
+if collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_toavoid, false, false) || collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_furniture_ghost, false, false) || scr_item_get_price(global.selecteditem) > global.money {
     color = c_red;
     global.placeable = false;
 } else {

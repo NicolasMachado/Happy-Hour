@@ -23,7 +23,7 @@ spry = floor((mouse_y - decaly - sprheight/2 + 16 + decaly)/32)*32;
 collspot = collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_seat, false, false);
     
 // set transparency color according to collision
-if collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_chair_simple, false, false) || scr_item_get_price(global.selecteditem) > global.money {
+if collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_furniture_ghost, false, false) || collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_furniture, false, false) || scr_item_get_price(global.selecteditem) > global.money {
     color = c_red;
     global.placeable = false;
 } else if collspot{
