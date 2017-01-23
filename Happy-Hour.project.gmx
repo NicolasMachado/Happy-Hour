@@ -136,6 +136,12 @@
           <sprite>sprites\spr_chair_1_180</sprite>
           <sprite>sprites\spr_chair_1_270</sprite>
         </sprites>
+        <sprites name="Chair 2">
+          <sprite>sprites\spr_chair_2_0</sprite>
+          <sprite>sprites\spr_chair_2_90</sprite>
+          <sprite>sprites\spr_chair_2_180</sprite>
+          <sprite>sprites\spr_chair_2_270</sprite>
+        </sprites>
       </sprites>
       <sprites name="Bars">
         <sprites name="Normal bar">
@@ -153,6 +159,22 @@
           <sprite>sprites\spr_stall_normal_270</sprite>
           <sprite>sprites\spr_stall_normal_top</sprite>
           <sprite>sprites\spr_stall_normal_door</sprite>
+        </sprites>
+        <sprites name="toilet 1">
+          <sprite>sprites\spr_stall_1_0</sprite>
+          <sprite>sprites\spr_stall_1_90</sprite>
+          <sprite>sprites\spr_stall_1_180</sprite>
+          <sprite>sprites\spr_stall_1_270</sprite>
+          <sprite>sprites\spr_stall_1_top</sprite>
+          <sprite>sprites\spr_stall_1_door</sprite>
+        </sprites>
+        <sprites name="toilet 2">
+          <sprite>sprites\spr_stall_2_0</sprite>
+          <sprite>sprites\spr_stall_2_90</sprite>
+          <sprite>sprites\spr_stall_2_180</sprite>
+          <sprite>sprites\spr_stall_2_270</sprite>
+          <sprite>sprites\spr_stall_2_top</sprite>
+          <sprite>sprites\spr_stall_2_door</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -322,12 +344,25 @@
         <object>objects\obj_chair</object>
         <object>objects\obj_chair_simple</object>
         <object>objects\obj_chair_1</object>
+        <object>objects\obj_chair_2</object>
       </objects>
       <objects name="Toilets">
         <object>objects\obj_toilet</object>
-        <object>objects\obj_toilet_simple</object>
-        <object>objects\obj_toilet_top</object>
-        <object>objects\obj_toilet_door</object>
+        <objects name="toilet 0">
+          <object>objects\obj_toilet_door</object>
+          <object>objects\obj_toilet_simple</object>
+          <object>objects\obj_toilet_top</object>
+        </objects>
+        <objects name="toilet 1">
+          <object>objects\obj_toilet_1</object>
+          <object>objects\obj_toilet_1_door</object>
+          <object>objects\obj_toilet_1_top</object>
+        </objects>
+        <objects name="toilet 2">
+          <object>objects\obj_toilet_2</object>
+          <object>objects\obj_toilet_2_door</object>
+          <object>objects\obj_toilet_2_top</object>
+        </objects>
       </objects>
     </objects>
     <objects name="Controllers">
@@ -367,9 +402,12 @@
         <objects name="Chairs">
           <object>objects\obj_simple_chair_button</object>
           <object>objects\obj_chair_1_button</object>
+          <object>objects\obj_chair_2_button</object>
         </objects>
         <objects name="Toilets">
           <object>objects\obj_simple_toilet_button</object>
+          <object>objects\obj_toilet_1_button</object>
+          <object>objects\obj_toilet_2_button</object>
         </objects>
         <objects name="Bars">
           <object>objects\obj_simple_bar_button</object>

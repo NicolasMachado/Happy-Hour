@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_button_toilet</parentName>
+  <parentName>obj_button_chair</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -28,16 +28,15 @@
             <string>/// Initialize
 
 event_inherited();
-buttonum = 0;
+buttonum = 2;
 decalx = 15;
-decaly = 25;
-scale = .6;
+decaly = 13;
+scale = .8;
 
 image_speed = 0;
 
 // get info from global item array
-itemnumber = 6;
-
+itemnumber = 12;
 selection = global.items[0,itemnumber];
 name = global.items[1,itemnumber];
 price = global.items[2,itemnumber];
@@ -45,8 +44,8 @@ mycolor = "";
 
 tooltiptext = string(name + "#$" + string(price));
 
-myparent = instance_find(obj_button_toilet, 0);
-buttonsprite = spr_stall_normal_270;
+myparent = instance_find(obj_button_chair, 0);
+buttonsprite = object_get_sprite(selection);
 </string>
           </argument>
         </arguments>

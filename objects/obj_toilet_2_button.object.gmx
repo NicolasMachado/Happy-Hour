@@ -28,7 +28,7 @@
             <string>/// Initialize
 
 event_inherited();
-buttonum = 0;
+buttonum = 2;
 decalx = 15;
 decaly = 25;
 scale = .6;
@@ -36,7 +36,7 @@ scale = .6;
 image_speed = 0;
 
 // get info from global item array
-itemnumber = 6;
+itemnumber = 14;
 
 selection = global.items[0,itemnumber];
 name = global.items[1,itemnumber];
@@ -46,7 +46,7 @@ mycolor = "";
 tooltiptext = string(name + "#$" + string(price));
 
 myparent = instance_find(obj_button_toilet, 0);
-buttonsprite = spr_stall_normal_270;
+buttonsprite = spr_stall_2_270;
 </string>
           </argument>
         </arguments>

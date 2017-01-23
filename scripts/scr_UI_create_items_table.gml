@@ -97,3 +97,27 @@ global.items[2,global.itemlistcount] = 95; // price
 global.items[3,global.itemlistcount] = 3; // wealth
 global.items[4,global.itemlistcount] = 1; // multiplier
 global.itemlistcount++;
+
+// 12
+global.items[0,global.itemlistcount] = obj_chair_2; // reference object
+global.items[1,global.itemlistcount] = "King's Harmony"; // name
+global.items[2,global.itemlistcount] = 295; // price
+global.items[3,global.itemlistcount] = 5; // wealth
+global.items[4,global.itemlistcount] = 1; // multiplier
+global.itemlistcount++;
+
+// 13
+global.items[0,global.itemlistcount] = obj_toilet_1; // reference object
+global.items[1,global.itemlistcount] = "Escape Plan"; // name
+global.items[2,global.itemlistcount] = 165; // price
+global.items[3,global.itemlistcount] = 3; // wealth
+global.items[4,global.itemlistcount] = 1; // multiplier
+global.itemlistcount++;
+
+// 14
+global.items[0,global.itemlistcount] = obj_toilet_2; // reference object
+global.items[1,global.itemlistcount] = "Baller's Minute"; // name
+global.items[2,global.itemlistcount] = 395; // price
+global.items[3,global.itemlistcount] = 5; // wealth
+global.items[4,global.itemlistcount] = 1; // multiplier
+global.itemlistcount++;

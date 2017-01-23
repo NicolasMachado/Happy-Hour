@@ -245,6 +245,9 @@
     <instance objName="obj_button_music" x="960" y="-160" name="inst_28BD42BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controller_main_menu" x="832" y="-32" name="inst_9A925F81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_chair_1_button" x="-160" y="288" name="inst_FD94CB47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_chair_2_button" x="-160" y="352" name="inst_639DE6BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_toilet_1_button" x="-160" y="416" name="inst_745619F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_toilet_2_button" x="-160" y="480" name="inst_D087080C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bk_grass" x="960" y="64" w="32" h="32" xo="0" yo="0" id="10000498" name="inst_EE9EE566" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -983,7 +986,7 @@
     <tile bgName="bk_tile_wood" x="608" y="736" w="64" h="64" xo="0" yo="0" id="10005577" name="inst_28F892E1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bk_main_tile_1" x="288" y="544" w="32" h="32" xo="0" yo="0" id="10005578" name="inst_BCC9F31A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bk_tree" x="128" y="64" w="160" h="224" xo="0" yo="0" id="10003256" name="inst_9D33CE02" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bk_tree" x="1024" y="705" w="160" h="448" xo="0" yo="0" id="10005083" name="inst_E577C645" depth="-600" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bk_tree" x="1024" y="704" w="160" h="448" xo="0" yo="0" id="10005083" name="inst_E577C645" depth="-600" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bk_flower_pots" x="288" y="832" w="128" h="64" xo="0" yo="0" id="10005075" name="inst_55532471" depth="-100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bk_flower_pots" x="800" y="832" w="128" h="64" xo="0" yo="64" id="10005076" name="inst_1610F153" depth="-100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>

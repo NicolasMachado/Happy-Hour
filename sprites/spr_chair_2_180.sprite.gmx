@@ -7,9 +7,9 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>7</bbox_left>
-  <bbox_right>32</bbox_right>
-  <bbox_top>0</bbox_top>
+  <bbox_left>8</bbox_left>
+  <bbox_right>35</bbox_right>
+  <bbox_top>1</bbox_top>
   <bbox_bottom>37</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -20,6 +20,6 @@
   <width>40</width>
   <height>40</height>
   <frames>
-    <frame index="0">images\spr_chair_1_270_0.png</frame>
+    <frame index="0">images\spr_chair_2_180_0.png</frame>
   </frames>
 </sprite>
