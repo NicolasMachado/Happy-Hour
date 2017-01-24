@@ -29,7 +29,8 @@
 event_inherited();
 
 // Salary
-salary = 8.50;
+basesalary = 8.50;
+salary = basesalary*(global.wealth/WEALTHDIV);
 salarycycle = 30; // in seconds
 scr_money_trade(x, y-70, -salary, "New hire");
 alarm[2] = salarycycle*room_speed;

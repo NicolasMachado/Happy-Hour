@@ -72,4 +72,9 @@ if finaldivisor != 0 {
     global.wealth = 1;
 }
 
+// salary wealth
+with (obj_server) {
+    salary = basesalary*(global.wealth/WEALTHDIV);
+}
+
 scr_UI_create_drinks_table();

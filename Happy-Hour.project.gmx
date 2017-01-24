@@ -459,7 +459,8 @@
     <room>rooms\rm_main_large</room>
     <room>rooms\rm_main</room>
   </rooms>
-  <constants number="2">
+  <constants number="3">
+    <constant name="WEALTHDIV">2</constant>
     <constant name="SCALE">global.zoom_scale_w</constant>
     <constant name="MESSAGE">global.messageinprogress</constant>
   </constants>
