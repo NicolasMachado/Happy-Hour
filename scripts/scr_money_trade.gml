@@ -3,10 +3,12 @@
 with (instance_create(argument0,argument1, obj_trade)) {
     amount = argument2;
     reason = argument3;
-    global.money += amount;
+    global.money += amount; 
+    
     // sound
     if amount > 0 {
-        audio_play_sound(snd_chaching, 1, false);
+        // 3D sound
+        audio_play_sound_on(emitter_id,snd_chaching,false,1);
     }
 }
 

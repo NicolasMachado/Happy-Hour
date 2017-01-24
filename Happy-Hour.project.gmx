@@ -387,6 +387,7 @@
       <object>objects\obj_spawner_r</object>
       <object>objects\obj_spawner_l</object>
       <object>objects\obj_fade_screen</object>
+      <object>objects\obj_listener</object>
     </objects>
     <objects name="UI">
       <object>objects\obj_touch_box</object>
