@@ -1,2 +1,2 @@
 # Happy-Hour
-Create and manage your bar in Happy Hour, a PC game created with Game Maker.
+Happy Hour is a PC game in which you create and manage a bar. On opening day, the money is tight, but it's up to you to transform your modest bar into a fancy successful establishment with a great reputation.
