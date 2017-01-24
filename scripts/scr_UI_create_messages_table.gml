@@ -3,7 +3,7 @@
 var i = 0;
 
 // 0
-global.messages[0,i] = scr_UI_process_message("Hi, and welcome to Happy Hour. I am going to take you through the basics of the game. If you would rather skip the tutorial and just freely play the game, disable the messages on the top right of the screen, and I promise I will not bother you again.##Click on this message to continue."); // message
+global.messages[0,i] = scr_UI_process_message("Hi, and welcome to Happy Hour. This tutorial is going to take you through the basics of the game. If you would rather skip the tutorial and just freely play the game, disable the messages on the top right of the screen, and I promise I will not bother you again.##Click on this message to continue."); // message
 global.messages[1,i] = string_width(global.messages[0,i]); // width
 global.messages[2,i] = string_height(global.messages[0,i]); // height
 global.messages[3,i] = false; // has the message been seen?
@@ -187,7 +187,7 @@ global.messages[4,i] = -1; // cooldown
 i++;
 
 // 23
-global.messages[0,i] = scr_UI_process_message("Oh, by the way, more pieces of furnitures have been unlocked. Don't hesitate to invest in better equipment to make more money. Good luck!"); // message
+global.messages[0,i] = scr_UI_process_message("Oh, by the way, more pieces of furnitures have been unlocked. Don't hesitate to invest in better furniture. The fancier your bar look, the more people will spend. Good luck!"); // message
 global.messages[1,i] = string_width(global.messages[0,i]); // width
 global.messages[2,i] = string_height(global.messages[0,i]); // height
 global.messages[3,i] = false; // has the message been seen?

@@ -300,7 +300,6 @@ if avgtime != 0 {
             <string>/// set first message boxes
 
 scr_UI_message_box(0);
-scr_UI_message_box(1);
 scr_UI_message_box(2);
 scr_UI_message_box(15);
 scr_UI_message_box(5);
