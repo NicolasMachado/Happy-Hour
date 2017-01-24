@@ -150,6 +150,18 @@
           <sprite>sprites\spr_bar_normal_180</sprite>
           <sprite>sprites\spr_bar_normal_270</sprite>
         </sprites>
+        <sprites name="Bar 2">
+          <sprite>sprites\spr_bar_2_0</sprite>
+          <sprite>sprites\spr_bar_2_90</sprite>
+          <sprite>sprites\spr_bar_2_180</sprite>
+          <sprite>sprites\spr_bar_2_270</sprite>
+        </sprites>
+        <sprites name="Bar 3">
+          <sprite>sprites\spr_bar_3_0</sprite>
+          <sprite>sprites\spr_bar_3_90</sprite>
+          <sprite>sprites\spr_bar_3_180</sprite>
+          <sprite>sprites\spr_bar_3_270</sprite>
+        </sprites>
       </sprites>
       <sprites name="Toilets">
         <sprites name="Normal stall">
@@ -328,6 +340,8 @@
       <objects name="Bars">
         <object>objects\obj_bar</object>
         <object>objects\obj_bar_normal</object>
+        <object>objects\obj_bar_2</object>
+        <object>objects\obj_bar_3</object>
       </objects>
       <objects name="Tables">
         <object>objects\obj_table</object>
@@ -411,6 +425,8 @@
         </objects>
         <objects name="Bars">
           <object>objects\obj_simple_bar_button</object>
+          <object>objects\obj_bar_2_button</object>
+          <object>objects\obj_bar_3_button</object>
         </objects>
         <objects name="Interacts">
           <object>objects\obj_stars_interact</object>

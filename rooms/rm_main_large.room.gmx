@@ -248,6 +248,8 @@
     <instance objName="obj_chair_2_button" x="-160" y="352" name="inst_639DE6BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_toilet_1_button" x="-160" y="416" name="inst_745619F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_toilet_2_button" x="-160" y="480" name="inst_D087080C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bar_2_button" x="-160" y="544" name="inst_0854D4DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bar_3_button" x="-160" y="608" name="inst_5DA695A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bk_grass" x="960" y="64" w="32" h="32" xo="0" yo="0" id="10000498" name="inst_EE9EE566" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

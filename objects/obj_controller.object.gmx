@@ -104,7 +104,7 @@ global.spawner = instance_find(obj_spawner_r, 0);
 
 global.placeable = false;
 
-global.money = 5001;
+global.money = 1500;
 
 global.reputation = 50;
 global.wealth = 1;
@@ -450,6 +450,8 @@ switch (keyboard_key)
     break;
 }
 
+
+/*
 if keyboard_check_pressed(vk_f12) {
     global.showdebug = 1-global.showdebug;
 }
@@ -465,6 +467,7 @@ if keyboard_check_pressed(vk_f10) {
 if keyboard_check_pressed(vk_f9) {
     global.showgrid = 1-global.showgrid;
 }
+*/
 </string>
           </argument>
         </arguments>

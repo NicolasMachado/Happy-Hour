@@ -121,3 +121,19 @@ global.items[2,global.itemlistcount] = 395; // price
 global.items[3,global.itemlistcount] = 5; // wealth
 global.items[4,global.itemlistcount] = 1; // multiplier
 global.itemlistcount++;
+
+// 15
+global.items[0,global.itemlistcount] = obj_bar_2; // reference object
+global.items[1,global.itemlistcount] = "Comet Counter"; // name
+global.items[2,global.itemlistcount] = 1590; // price
+global.items[3,global.itemlistcount] = 2.8; // wealth
+global.items[4,global.itemlistcount] = 6; // multiplier
+global.itemlistcount++;
+
+// 16
+global.items[0,global.itemlistcount] = obj_bar_3; // reference object
+global.items[1,global.itemlistcount] = "Royal Counter"; // name
+global.items[2,global.itemlistcount] = 3950; // price
+global.items[3,global.itemlistcount] = 5; // wealth
+global.items[4,global.itemlistcount] = 7; // multiplier
+global.itemlistcount++;
