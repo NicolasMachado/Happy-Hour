@@ -31,9 +31,13 @@ if (intention == "serve") {
         ds_priority_delete_max(listtoserve);  
         
         // tuto messages  
-        scr_UI_message_box(9);
-        scr_UI_message_box(10);
-        scr_UI_message_box(11);
+        if global.tutorial {
+            scr_UI_message_box(9);
+            scr_UI_message_box(10);
+            scr_UI_message_box(11);
+            scr_UI_message_box(23);
+            scr_UI_add_offtutorial_buttons();
+        }
         
         // if no customer on personal list
         if ds_priority_size(listtoserve) < 1 {

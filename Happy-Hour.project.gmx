@@ -264,6 +264,7 @@
       <script>scripts\scr_UI_process_message.gml</script>
       <script>scripts\scr_UI_dismiss_message.gml</script>
       <script>scripts\scr_UI_create_messages_table.gml</script>
+      <script>scripts\scr_UI_add_offtutorial_buttons.gml</script>
     </scripts>
     <scripts name="state">
       <script>scripts\scr_state_drink.gml</script>

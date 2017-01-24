@@ -3,7 +3,7 @@
 var i = 0;
 
 // 0
-global.messages[0,i] = scr_UI_process_message("Hi, and welcome to Happy Hour. I am going to take you through the basics of the game. If you would rather just freely play the game, disable the messages on the top right of the screen, and I promise I will not bother you again.##Click on this message to continue."); // message
+global.messages[0,i] = scr_UI_process_message("Hi, and welcome to Happy Hour. I am going to take you through the basics of the game. If you would rather skip the tutorial and just freely play the game, disable the messages on the top right of the screen, and I promise I will not bother you again.##Click on this message to continue."); // message
 global.messages[1,i] = string_width(global.messages[0,i]); // width
 global.messages[2,i] = string_height(global.messages[0,i]); // height
 global.messages[3,i] = false; // has the message been seen?
@@ -43,7 +43,7 @@ global.messages[4,i] = -1; // cooldown
 i++;
 
 // 5
-global.messages[0,i] = scr_UI_process_message("First off, let's buy a basic counter where your waiters will prepare drinks. Select the basic counter in the left menu, and place it anywhere you want.##Please note that it needs to be against a wall. You can scroll with your middle mouse to rotate an element."); // message
+global.messages[0,i] = scr_UI_process_message("First off, let's buy a counter where your waiters will prepare drinks. Select the basic counter in the left menu, and place it anywhere you want.##Please note that it needs to be against a wall. You can scroll with your middle mouse to rotate an element. Make sure the entrance of the counter is free!"); // message
 global.messages[1,i] = string_width(global.messages[0,i]); // width
 global.messages[2,i] = string_height(global.messages[0,i]); // height
 global.messages[3,i] = false; // has the message been seen?
@@ -51,7 +51,7 @@ global.messages[4,i] = -1; // cooldown
 i++;
 
 // 6
-global.messages[0,i] = scr_UI_process_message("Nice! Now buy a simple bathroom stall and place it anywhere you want. The blue arrow indicates the side of the entrance. Make sure it's free."); // message
+global.messages[0,i] = scr_UI_process_message("Nice! Now buy a bathroom stall and place it anywhere you want. The blue arrow indicates the side of the entrance. Make sure it's free."); // message
 global.messages[1,i] = string_width(global.messages[0,i]); // width
 global.messages[2,i] = string_height(global.messages[0,i]); // height
 global.messages[3,i] = false; // has the message been seen?
@@ -67,7 +67,7 @@ global.messages[4,i] = -1; // cooldown
 i++;
 
 // 8
-global.messages[0,i] = scr_UI_process_message("Finally, buy a table. Let's say... the 'Square'. Place it, add chairs around it, and make sure you leave enough room for people to walk around!"); // message
+global.messages[0,i] = scr_UI_process_message("Finally, buy a table. Place it, add chairs around it, and make sure you leave enough room for people to walk around!"); // message
 global.messages[1,i] = string_width(global.messages[0,i]); // width
 global.messages[2,i] = string_height(global.messages[0,i]); // height
 global.messages[3,i] = false; // has the message been seen?
@@ -180,6 +180,14 @@ i++;
 
 // 22
 global.messages[0,i] = scr_UI_process_message("I guess you had your reasons for kicking this customer out. Fair enough. Just be aware that it takes a fair toll on your reputation."); // message
+global.messages[1,i] = string_width(global.messages[0,i]); // width
+global.messages[2,i] = string_height(global.messages[0,i]); // height
+global.messages[3,i] = false; // has the message been seen?
+global.messages[4,i] = -1; // cooldown
+i++;
+
+// 23
+global.messages[0,i] = scr_UI_process_message("Oh, by the way, more pieces of furnitures have been unlocked. Don't hesitate to invest in better equipment to make more money. Good luck!"); // message
 global.messages[1,i] = string_width(global.messages[0,i]); // width
 global.messages[2,i] = string_height(global.messages[0,i]); // height
 global.messages[3,i] = false; // has the message been seen?

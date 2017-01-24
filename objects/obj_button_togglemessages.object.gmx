@@ -92,7 +92,9 @@ global.messagesactivated = 1 - global.messagesactivated;
 if global.messagesactivated == 0 {
     scr_UI_dismiss_message();
     ds_queue_clear(global.messageslist);
-    tooltiptext = "Messages#Currently OFF";
+    tooltiptext = "Messages#Currently OFF";   
+
+    scr_UI_add_offtutorial_buttons();
     
     global.messages[3,9] = true; // set first client served message to read
 } else {

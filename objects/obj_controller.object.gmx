@@ -104,7 +104,9 @@ global.spawner = instance_find(obj_spawner_r, 0);
 
 global.placeable = false;
 
-global.money = 1500;
+global.money = 2000;
+
+global.tutorial = 1;
 
 global.reputation = 50;
 global.wealth = 1;

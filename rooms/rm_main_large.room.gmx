@@ -162,7 +162,6 @@
     <instance objName="obj_occupy_grid" x="832" y="0" name="inst_C6017DBC" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_occupy_grid" x="960" y="0" name="inst_6A42B581" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_table_1x1_button" x="160" y="-96" name="inst_6B9733E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_table_2x2_button" x="96" y="-96" name="inst_F4ACBB1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_no_construction" x="0" y="864" name="inst_605DB1CE" locked="0" code="" scaleX="19.6129035949707" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="obj_no_construction" x="608" y="896" name="inst_C848E858" locked="0" code="" scaleX="3.09677410125732" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="obj_no_construction" x="704" y="864" name="inst_84AB8460" locked="0" code="" scaleX="14" scaleY="6" colour="4294967295" rotation="0"/>
@@ -231,25 +230,13 @@
     <instance objName="obj_no_construction" x="0" y="608" name="inst_D3CB992E" locked="0" code="" scaleX="4" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_no_construction" x="1024" y="608" name="inst_38D414DC" locked="0" code="" scaleX="4" scaleY="8.25806427001953" colour="4294967295" rotation="0"/>
     <instance objName="obj_button_interact_fire" x="160" y="-192" name="inst_D6BFB0D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_table_2x2_1_button" x="-160" y="-32" name="inst_4798E9E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_table_3x2_button" x="-160" y="32" name="inst_7A5C26D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_table_3x2_1_button" x="-160" y="96" name="inst_58CE2ADA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_table_3x2_2_button" x="-160" y="160" name="inst_D86608AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_table_2x2_2_button" x="-224" y="-32" name="inst_DA0AEA4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wealth_interact" x="800" y="-128" name="inst_81CB255C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bronze_interact" x="1024" y="-192" name="inst_9A2B0B15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_silver_interact" x="1024" y="-224" name="inst_3CC9E7FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_gold_interact" x="1056" y="-224" name="inst_E8D26B63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_table_1x1_1_button" x="-160" y="224" name="inst_63BC55AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_button_SFX" x="928" y="-160" name="inst_62C0A48B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_button_music" x="960" y="-160" name="inst_28BD42BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controller_main_menu" x="832" y="-32" name="inst_9A925F81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_chair_1_button" x="-160" y="288" name="inst_FD94CB47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_chair_2_button" x="-160" y="352" name="inst_639DE6BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_toilet_1_button" x="-160" y="416" name="inst_745619F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_toilet_2_button" x="-160" y="480" name="inst_D087080C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_bar_2_button" x="-160" y="544" name="inst_0854D4DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_bar_3_button" x="-160" y="608" name="inst_5DA695A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_listener" x="992" y="-96" name="inst_40EE6B9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

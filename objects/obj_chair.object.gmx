@@ -47,6 +47,7 @@ if MESSAGE == 8 {
     scr_UI_dismiss_message();
 }
 
+
 scr_wealth_calculation();
 </string>
           </argument>
