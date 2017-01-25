@@ -56,6 +56,7 @@ ii = 0;
 experience = 0;
 level = 0;
 fired = 0;
+mypathposition = 0;
 
 // set BASE speed
 var basespd = 3;
@@ -384,18 +385,19 @@ if global.showdebug1 {
     draw_set_font(debugfont);
     draw_text(x-15, y-200, 
     //"I am: " + string(self.id) + "#" +
-    //"intention: " + string(intention) + "#" +
+    "intention: " + string(intention) + "#" +
     //"carrying: " + string(carrying) + "#" +
     //"serving: " + string(customertoserve) + "#" +
-    //"goal: " + string(goal) + "#" +
+    "goal: " + string(goal) + "#" +
+    "goaltype: " + string(goaltype) + "#" +
     //"customertoserve: " + string(customertoserve) + "#" +    
     //"list size: " + string(ds_priority_size(listtoserve)) + "#" +
     //"listtoserve top: " + string(ds_priority_find_max(listtoserve)) + "#" +
     //"drink: " + string((carrying%1)*100) + "#" +
-    "wit: " + string(wit) + "#" +
-    "spd: " + string(spd) + "#" +
-    "level: " + string(level) + "#" +
-    "exp: " + string(experience) + "#" +
+    //"wit: " + string(wit) + "#" +
+    //"spd: " + string(spd) + "#" +
+    //"level: " + string(level) + "#" +
+    //"exp: " + string(experience) + "#" +
     "#"
     ); 
 }

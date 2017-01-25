@@ -49,6 +49,7 @@ sprdir = "_r";
 timerspritecounter = 0;
 happiness = 0;
 fired = false;
+mypathposition = 0;
 
 alarm[3] = room_speed/2; // update happiness
 

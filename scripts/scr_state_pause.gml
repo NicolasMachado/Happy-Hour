@@ -1,2 +1,5 @@
 /// scr_state_pause()
-image_index = 0;
+
+if !global.gamepause {
+    image_index = 0;
+}

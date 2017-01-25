@@ -82,7 +82,6 @@ audio_emitter_free(emitter_id);
           <argument>
             <kind>1</kind>
             <string>/// move
-
 y -= 3/counter;
 counter++;
 

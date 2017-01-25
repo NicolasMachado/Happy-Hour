@@ -217,6 +217,8 @@
       <sprite>sprites\spr_fade_screen</sprite>
       <sprite>sprites\spr_fire</sprite>
       <sprite>sprites\spr_smileys</sprite>
+      <sprite>sprites\spr_pause_button</sprite>
+      <sprite>sprites\spr_unpause_button</sprite>
       <sprite>sprites\spr_medals</sprite>
     </sprites>
     <sprites name="Main Menu">
@@ -303,6 +305,7 @@
     <script>scripts\scr_update_grid.gml</script>
     <script>scripts\scr_spots.gml</script>
     <script>scripts\scr_get_random_name.gml</script>
+    <script>scripts\scr_gamepause.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\debugfont</font>
@@ -389,6 +392,7 @@
       <object>objects\obj_spawner_l</object>
       <object>objects\obj_fade_screen</object>
       <object>objects\obj_listener</object>
+      <object>objects\obj_pause</object>
     </objects>
     <objects name="UI">
       <object>objects\obj_touch_box</object>
@@ -441,6 +445,7 @@
           <object>objects\obj_button_togglemessages</object>
           <object>objects\obj_button_SFX</object>
           <object>objects\obj_button_music</object>
+          <object>objects\obj_button_pause</object>
         </objects>
       </objects>
     </objects>

@@ -123,7 +123,7 @@ global.messages[4,i] = 30*room_speed; // cooldown
 i++;
 
 // 15
-global.messages[0,i] = scr_UI_process_message("You can scroll up and down with your mouse to zoom in and out. You can also move the camera around using the arrow keys on your keyboard.##But enough blabbering, let's get started!"); // message
+global.messages[0,i] = scr_UI_process_message("You can pause and unpause the game using the space key. You can scroll up and down with your mouse to zoom in and out. You can also move the camera around using the arrow keys on your keyboard.##But enough blabbering, let's get started!"); // message
 global.messages[1,i] = string_width(global.messages[0,i]); // width
 global.messages[2,i] = string_height(global.messages[0,i]); // height
 global.messages[3,i] = false; // has the message been seen?
