@@ -22,7 +22,7 @@ if (instance_exists(goal) && mp_grid_path(global.grid, path, x, y, goal.x+16, go
     // if the goal is a server bar spot or table server spot or wander point, lock it
     else if (goaltype == "obj_server_bar_spot" || goaltype == "obj_server_table_spot" || goaltype == "obj_wander_point") {
             goal.occupied = 1;
-            if (mycurrentspot != "" && instance_exists(mycurrentspot)) { mycurrentspot.occupied = 0; }
+            if (mycurrentspot != "" && instance_exists(mycurrentspot) && mycurrentspot != goal) { mycurrentspot.occupied = 0; }
             mycurrentspot = goal;
             scr_spots("update", obj_server_bar_spot);
     }  

@@ -116,8 +116,9 @@ if !reachable {
 
 draw_self();
 if global.showdebug {
-    draw_text(x+12, y+20, "A: " + string(activated) + "#" +
-    "R: " + string(reachable) + "#" +
+    draw_text(x+12, y+20, 
+    //"A: " + string(activated) + "#" +
+    //"R: " + string(reachable) + "#" +
     //"angle: " + string(angle) //+ "#" +
     "O: " + string(occupied)
     );

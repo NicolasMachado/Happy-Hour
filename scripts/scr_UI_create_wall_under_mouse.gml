@@ -29,12 +29,15 @@ if (global.placeable && !position_meeting(mouse_x, mouse_y, obj_button)) {
             scr_action_pause(1, "");
         }  
     }
+    
     with (obj_server) {
         if moving {
+            goal.occupied = 0;
             path_end();
             scr_action_pause(1, "");
         }          
-    }
+    }  
+    
 } else {
     scr_UI_log_write("Can't place item here.");
     audio_play_sound(snd_menu_wrong, 1, 0);

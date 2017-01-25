@@ -51,6 +51,8 @@ happiness = 0;
 fired = false;
 mypathposition = 0;
 
+goal = "";
+
 alarm[3] = room_speed/2; // update happiness
 
 prevx = 0; // unstuck
