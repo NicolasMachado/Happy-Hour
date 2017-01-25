@@ -433,6 +433,7 @@ if view_yview &gt; room_height-view_hview[0] {view_yview = room_height-view_hvie
 
 switch (keyboard_key)
 {
+    /*
     case vk_f1: global.selecteditem = obj_wall; break;
     case vk_f2: global.selecteditem = ""; break; //
     case vk_f3: global.selecteditem = "bulldozer"; break;
@@ -441,6 +442,7 @@ switch (keyboard_key)
     case vk_f6: global.selecteditem = obj_toilet_spot; break;
     case vk_f7: global.selecteditem = obj_server; break;
     case vk_f8: global.selecteditem = global.items[0,0]; break;
+    */
     
     case vk_escape: global.selecteditem = ""; 
     global.selectedmenu = "";
@@ -982,7 +984,7 @@ if global.showdebug2 {
           <argument>
             <kind>1</kind>
             <string>/// PAUSE
-
+/*
 if (!global.gamepause){
     global.gamepause = true;
     room_speed = 3;
@@ -990,7 +992,7 @@ if (!global.gamepause){
 else {
     global.gamepause = false;
     room_speed = 60;
-}
+}*/
 </string>
           </argument>
         </arguments>
