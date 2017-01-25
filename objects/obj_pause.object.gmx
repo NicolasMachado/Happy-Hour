@@ -28,7 +28,7 @@
             <string>/// freeze objects + freeze alarms
 
 if global.gamepause {
-    // Pause all alarms of all objects
+    // Pause all alarms (up to 10) of all objects by incrementing every step if &gt; 0
     with (all) {
         for(var i = 0; i &lt;= 11; i++){
             if(alarm[i] &gt; 0) alarm[i]++;
@@ -38,7 +38,7 @@ if global.gamepause {
     
     // pause customers on their path
     with (obj_customer) {
-        path_position = mypathposition;
+        path_position = mypathposition; // pause instances by calling them at the same exact position on the path every frame
     }
     
     // pause servers on their path
