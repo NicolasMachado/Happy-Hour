@@ -61,23 +61,30 @@ chairsell = collision_point(mouse_x, mouse_y, obj_chair, false, false);
 barsell = collision_point(mouse_x, mouse_y, obj_bar, false, false);
 toiletsell = collision_point(mouse_x, mouse_y, obj_toilet, false, false);
 
-if button {
-    str = button.tooltiptext;
-} else if buttonUI {
-    str = buttonUI.tooltiptext;
-} else if global.selecteditem == "bulldozer" &amp;&amp; tablesell {
-    str = "Sells for $" + string(tablesell.price/2);
-} else if global.selecteditem == "bulldozer" &amp;&amp; chairsell {
-    str = "Sells for $" + string(chairsell.price/2);
-} else if global.selecteditem == "bulldozer" &amp;&amp; barsell {
-    str = "Sells for $" + string(barsell.price/2);
-} else if global.selecteditem == "bulldozer" &amp;&amp; toiletsell {
-    str = "Sells for $" + string(toiletsell.price/2);
+// if any room except mainmenu
+if room != rm_mainmenu {
+    if button {
+        str = button.tooltiptext;
+    } else if buttonUI {
+        str = buttonUI.tooltiptext;
+    } else if obj_controller.selecteditem == "bulldozer" &amp;&amp; tablesell {
+        str = "Sells for $" + string(tablesell.price/2);
+    } else if obj_controller.selecteditem == "bulldozer" &amp;&amp; chairsell {
+        str = "Sells for $" + string(chairsell.price/2);
+    } else if obj_controller.selecteditem == "bulldozer" &amp;&amp; barsell {
+        str = "Sells for $" + string(barsell.price/2);
+    } else if obj_controller.selecteditem == "bulldozer" &amp;&amp; toiletsell {
+        str = "Sells for $" + string(toiletsell.price/2);
+    } else {
+        tablesell = "";
+        chairsell = "";
+        barsell = "";
+        toiletsell = "";
+    }
 } else {
-    tablesell = "";
-    chairsell = "";
-    barsell = "";
-    toiletsell = "";
+    if buttonUI {
+        str = buttonUI.tooltiptext;
+    }
 }
 </string>
           </argument>
@@ -102,9 +109,13 @@ if button {
           <argument>
             <kind>1</kind>
             <string>/// Draw
-if ((button || buttonUI || tablesell || chairsell || barsell || toiletsell) &amp;&amp; !point_in_rectangle(mouse_x, mouse_y, view_xview[1], view_yview[1], view_xview[1]+view_wview[1], view_yview[1]+view_hview[1]))
+if (room == rm_mainmenu &amp;&amp; buttonUI) || ((button || buttonUI || tablesell || chairsell || barsell || toiletsell) &amp;&amp; !point_in_rectangle(mouse_x, mouse_y, view_xview[1], view_yview[1], view_xview[1]+view_wview[1], view_yview[1]+view_hview[1]))
 {
-    draw_set_font(UI_tooltip);
+    if global.lowres {
+        draw_set_font(UI_tooltip);
+    } else {
+        draw_set_font(UI_tooltip_big);        
+    }
     var mousex = device_mouse_x_to_gui(0);
     var mousey = device_mouse_y_to_gui(0);
     strw = string_width(str);
@@ -119,7 +130,7 @@ if ((button || buttonUI || tablesell || chairsell || barsell || toiletsell) &amp
     // box
     draw_set_colour(c_black);
     draw_set_alpha(.8);
-    draw_roundrect_colour_ext(mousex + 20 - compensate, mousey + 20, mousex + 30 + strw - compensate, mousey + 30 + stry, 10, 10, c_black, c_black, false);
+    draw_roundrect_colour_ext(mousex + 19 - compensate, mousey + 20, mousex + 30 + strw - compensate, mousey + 30 + stry, 10, 10, c_black, c_black, false);
     
     // text
     draw_set_alpha(1);

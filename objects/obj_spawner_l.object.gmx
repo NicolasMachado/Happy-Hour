@@ -27,11 +27,10 @@
             <kind>1</kind>
             <string>/// script spawn call
 // spawns
-originalmintime = 20; // score if reputation == 100
-originalmaxtime = 100; // score if reputation == 100
+scr_set_spawn_timer(obj_controller.currentlevel);
 
-mintime = originalmintime/(global.reputation/100);
-maxtime = originalmaxtime/(global.reputation/100);
+mintime = originalmintime/(obj_controller.reputation/100);
+maxtime = originalmaxtime/(obj_controller.reputation/100);
 
 var next_spawn_time = random_range(mintime,maxtime);
 alarm[0] = next_spawn_time;

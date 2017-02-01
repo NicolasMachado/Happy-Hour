@@ -40,7 +40,7 @@ col.activated = 1;
 
 scr_spots("update", obj_seat);
 
-if global.itemrot == 90 { depth-=17; }
+if obj_controller.itemrot == 90 { depth-=17; }
 
 // tutorial
 if MESSAGE == 8 {

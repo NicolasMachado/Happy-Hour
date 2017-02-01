@@ -32,36 +32,36 @@ var myID = id;
 
 // get info from global item array
 itemnumber = 16;
-name = global.items[1,itemnumber];
-price = global.items[2,itemnumber];
+name = obj_controller.items[1,itemnumber];
+price = obj_controller.items[2,itemnumber];
 
 
 // build according to current rotation
 
-if global.itemrot == 0 {
+if obj_controller.itemrot == 0 {
     depth = -y-100;
-    mp_grid_add_cell(global.grid, floor(x/32), floor((y/32)+3));
-    with (instance_create(x, y, obj_server_bar_spot)) { barID = myID; angle = global.itemrot; }
-    with (instance_create(x, y+32, obj_server_bar_spot)) { barID = myID; angle = global.itemrot; }
-    with (instance_create(x, y+64, obj_server_bar_spot)) { barID = myID; angle = global.itemrot; }
-} else if global.itemrot == 90 {
+    mp_grid_add_cell(obj_grid.grid, floor(x/32), floor((y/32)+3));
+    with (instance_create(x, y, obj_server_bar_spot)) { barID = myID; angle = obj_controller.itemrot; }
+    with (instance_create(x, y+32, obj_server_bar_spot)) { barID = myID; angle = obj_controller.itemrot; }
+    with (instance_create(x, y+64, obj_server_bar_spot)) { barID = myID; angle = obj_controller.itemrot; }
+} else if obj_controller.itemrot == 90 {
     depth = -y-32;
-    mp_grid_add_cell(global.grid, floor(x/32)+3, floor(y/32)+1);
-    with (instance_create(x, y+32, obj_server_bar_spot)) { barID = myID; angle = global.itemrot; }
-    with (instance_create(x+32, y+32, obj_server_bar_spot)) { barID = myID; angle = global.itemrot; }
-    with (instance_create(x+64, y+32, obj_server_bar_spot)) { barID = myID; angle = global.itemrot; }
-} else if global.itemrot == 180 {
+    mp_grid_add_cell(obj_grid.grid, floor(x/32)+3, floor(y/32)+1);
+    with (instance_create(x, y+32, obj_server_bar_spot)) { barID = myID; angle = obj_controller.itemrot; }
+    with (instance_create(x+32, y+32, obj_server_bar_spot)) { barID = myID; angle = obj_controller.itemrot; }
+    with (instance_create(x+64, y+32, obj_server_bar_spot)) { barID = myID; angle = obj_controller.itemrot; }
+} else if obj_controller.itemrot == 180 {
     depth = -y-32;
-    mp_grid_add_cell(global.grid, floor(x/32)+1, floor(y/32));
-    with (instance_create(x+32, y+32, obj_server_bar_spot)) { barID = myID; angle = global.itemrot; }
-    with (instance_create(x+32, y+64, obj_server_bar_spot)) { barID = myID; angle = global.itemrot; }
-    with (instance_create(x+32, y+96, obj_server_bar_spot)) { barID = myID; angle = global.itemrot; }
-} else if global.itemrot == 270 {
+    mp_grid_add_cell(obj_grid.grid, floor(x/32)+1, floor(y/32));
+    with (instance_create(x+32, y+32, obj_server_bar_spot)) { barID = myID; angle = obj_controller.itemrot; }
+    with (instance_create(x+32, y+64, obj_server_bar_spot)) { barID = myID; angle = obj_controller.itemrot; }
+    with (instance_create(x+32, y+96, obj_server_bar_spot)) { barID = myID; angle = obj_controller.itemrot; }
+} else if obj_controller.itemrot == 270 {
     depth = -y-32;
-    mp_grid_add_cell(global.grid, floor(x/32), floor(y/32));
-    with (instance_create(x+32, y, obj_server_bar_spot)) { barID = myID; angle = global.itemrot; }
-    with (instance_create(x+64, y, obj_server_bar_spot)) { barID = myID; angle = global.itemrot; }
-    with (instance_create(x+96, y, obj_server_bar_spot)) { barID = myID; angle = global.itemrot; }
+    mp_grid_add_cell(obj_grid.grid, floor(x/32), floor(y/32));
+    with (instance_create(x+32, y, obj_server_bar_spot)) { barID = myID; angle = obj_controller.itemrot; }
+    with (instance_create(x+64, y, obj_server_bar_spot)) { barID = myID; angle = obj_controller.itemrot; }
+    with (instance_create(x+96, y, obj_server_bar_spot)) { barID = myID; angle = obj_controller.itemrot; }
 }
 
 event_inherited();

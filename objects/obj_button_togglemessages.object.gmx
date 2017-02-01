@@ -54,7 +54,7 @@ tooltiptext = "Messages#Currently ON";
             <kind>1</kind>
             <string>/// Follow the GUI
 
-x = view_xview[0] + (view_wport[0]/1.02*SCALE);
+x = view_xview[0] + (obj_controller.posoptions-30*3)*SCALE;
 y = view_yview[0] + ((obj_controller.blackbarsize/2)+1)*SCALE;
 
 // Scale
@@ -86,17 +86,15 @@ image_yscale = SCALE;
             <string>/// toggle messages
 event_inherited();
 
-global.messagesactivated = 1 - global.messagesactivated;
+obj_controller.messagesactivated = 1 - obj_controller.messagesactivated;
 
 //if messages deactivated
-if global.messagesactivated == 0 {
+if obj_controller.messagesactivated == 0 {
     scr_UI_dismiss_message();
-    ds_queue_clear(global.messageslist);
+    ds_queue_clear(obj_controller.messageslist);
     tooltiptext = "Messages#Currently OFF";   
 
     scr_UI_add_offtutorial_buttons();
-    
-    global.messages[3,9] = true; // set first client served message to read
 } else {
     tooltiptext = "Messages#Currently ON";   
 }

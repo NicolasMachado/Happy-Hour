@@ -3,7 +3,7 @@
 var objtocreate = argument0;
 
 // if the cells are free and cursor out of menu
-if (global.placeable && !position_meeting(mouse_x, mouse_y, obj_button)) {
+if (obj_controller.placeable && !position_meeting(mouse_x, mouse_y, obj_button)) {
 
     // create the instance at snap place
     instance_create(sprx, spry, objtocreate);

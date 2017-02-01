@@ -27,13 +27,16 @@
             <kind>1</kind>
             <string>/// INIT
 
+scr_initialize_ini();
+
 instance_create(-1, -1, obj_fade_screen);
 
 // get real random
 randomize();
 
-global.fadealpha = 1;
-global.isfading = false;
+fadealpha = 1;
+isfading = false;
+selectedroom = 0;
 
 // timer glass appear
 if room = rm_mainmenu {
@@ -58,6 +61,74 @@ tracknum = irandom(nbtracks-1); // current song playing
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// create room objects
+if room == rm_mainmenu {
+
+    var centerx = view_wview[0]/2;
+    var centery = view_hview[0]/2;
+    var buttonwidth = 256;
+    
+    instance_create(view_wview[0] - 30, 30, obj_button_quit_mm);
+    instance_create(view_wview[0] - 60, 30, obj_button_fullscreen_mm);
+    instance_create(view_wview[0] - 90, 30, obj_button_resolution_mm);
+    instance_create(view_wview[0] - 120, 30, obj_button_music_mm);
+    instance_create(view_wview[0] - 150, 30, obj_button_SFX_mm);
+    instance_create(-1000, -1000, obj_tooltip);
+        
+    if global.lowres { // low res        
+        with (instance_create(centerx - 180 - 10, centery+90, obj_button_lv1)) {
+            image_xscale = .7;
+            image_yscale = .7;
+        }
+        with (instance_create(centerx + 10, centery+90, obj_button_lv2)){
+            image_xscale = .7;
+            image_yscale = .7;
+        }
+        with (instance_create(centerx - 180 - 10, centery + 150, obj_button_lv3)){
+            image_xscale = .7;
+            image_yscale = .7;
+        }
+        with (instance_create(centerx + 10, centery + 150, obj_button_lv4)){
+            image_xscale = .7;
+            image_yscale = .7;
+        }
+        
+        instance_create(centerx, view_hview[0]-60, obj_main_menu_text);
+        
+        instance_create(-1000, 10, obj_logo1);
+        instance_create(view_wview[0] + 1300, 160, obj_logo2);
+        
+    } else { // high res
+        instance_create(centerx - buttonwidth - 20, centery + 100, obj_button_lv1);
+        instance_create(centerx + 20, centery + 100, obj_button_lv2);
+        instance_create(centerx - buttonwidth - 20, centery + 184, obj_button_lv3);
+        instance_create(centerx + 20, centery + 184, obj_button_lv4);
+        instance_create(centerx, view_hview[0]-110, obj_main_menu_text);
+        
+        instance_create(-1000, 250, obj_logo1);
+        instance_create(view_wview[0] + 1300, 400, obj_logo2);
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="1">
       <action>
@@ -77,7 +148,13 @@ tracknum = irandom(nbtracks-1); // current song playing
           <argument>
             <kind>1</kind>
             <string>/// create glass
-instance_create(260, 225, obj_main_menu_glass);
+if !obj_controller_main_menu.isfading {
+    if !global.lowres {
+        instance_create(obj_logo1.finalpositionx + 50, 400, obj_main_menu_glass);
+    } else {
+        instance_create(obj_logo1.finalpositionx + 50, 160, obj_main_menu_glass);        
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -119,6 +196,18 @@ if musicplaying == false {
     }
     audio_play_sound(musics[tracknum], 1, false);
 }
+
+if !global.music {
+    audio_group_set_gain(Music_gen, 0, 1);    
+} else {
+    audio_group_set_gain(Music_gen, 100, 0); 
+}
+
+if !global.SFX {
+    audio_group_set_gain(Sound_FX, 0, 1);
+} else {    
+    audio_group_set_gain(Sound_FX, 100, 0); 
+}
 </string>
           </argument>
         </arguments>
@@ -143,12 +232,45 @@ if musicplaying == false {
             <kind>1</kind>
             <string>/// isfading
 
-if global.isfading {
-    global.fadealpha -= .05;
+if obj_controller_main_menu.isfading {
+    obj_controller_main_menu.fadealpha -= .05;
 }
 
-if global.fadealpha &lt; -2 {
-    room_goto_next();
+if obj_controller_main_menu.fadealpha &lt; -2 {
+    room = obj_controller_main_menu.selectedroom;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// rectangle options
+if room == rm_mainmenu {
+    draw_set_colour(c_black);
+    if obj_controller_main_menu.isfading {
+        draw_set_alpha(obj_controller_main_menu.fadealpha/2);
+    } else {
+        draw_set_alpha(.5);
+    }
+    draw_roundrect(view_wview[0] - 165, 15, view_wview[0] - 15, 43, false);
+    draw_set_alpha(1);
 }
 </string>
           </argument>

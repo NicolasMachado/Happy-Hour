@@ -1,7 +1,7 @@
 /// scr_move_to_goal()
   
 // if the path to whatever the goal is exists and if the goal exists
-if (instance_exists(goal) && mp_grid_path(global.grid, path, x, y, goal.x+16, goal.y+16, 1) && goal != ""){ 
+if (instance_exists(goal) && mp_grid_path(obj_grid.grid, path, x, y, goal.x+16, goal.y+16, 1) && goal != ""){ 
 
     // if the goal is a seat, lock it
     if (goaltype == "obj_seat" && !myseat) {

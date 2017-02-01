@@ -30,7 +30,7 @@ event_inherited();
 
 // Salary
 basesalary = 8.50;
-salary = basesalary*(global.wealth/WEALTHDIV);
+salary = basesalary*(obj_controller.wealth/WEALTHDIV);
 salarycycle = 30; // in seconds
 scr_money_trade(x, y-70, -salary, "New hire");
 alarm[2] = salarycycle*room_speed;
@@ -103,8 +103,8 @@ if MESSAGE == 7 {
             <kind>1</kind>
             <string>/// remove window view
 
-if global.selected == self.id {
-    global.selected = "";
+if obj_controller.selected == self.id {
+    obj_controller.selected = "";
     view_visible[1] = false;
 }
 </string>
@@ -129,13 +129,13 @@ if global.selected == self.id {
             <kind>1</kind>
             <string>/// Reputation + avgwaitingtime calculation
 
-global.reputation -= 10;
+obj_controller.reputation -= 10;
 
 // limits
-if global.reputation &gt; 100 {
-    global.reputation = 99.9;
-} else if global.reputation &lt;= 3 {
-    global.reputation = 3;
+if obj_controller.reputation &gt; 100 {
+    obj_controller.reputation = 99.9;
+} else if obj_controller.reputation &lt;= 3 {
+    obj_controller.reputation = 3;
 }
 </string>
           </argument>
@@ -372,7 +372,7 @@ sprite_index = currspr;
             <string>//Draw self
 draw_self();
 
-if global.showdebug1 {
+if obj_controller.showdebug1 {
 
     /// Draw ALL
     if path_exists(path){

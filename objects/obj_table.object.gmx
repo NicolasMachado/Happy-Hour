@@ -71,7 +71,7 @@ if w &gt; h {
     }
     // if square table
 } else {
-    if global.itemrot == 0 || global.itemrot == 180 {
+    if obj_controller.itemrot == 0 || obj_controller.itemrot == 180 {
         for (i=0; i &lt; hcells; i++) {
             with (instance_create(x+(32*i), y-32, obj_seat)) {
                 angle = 270;
@@ -84,7 +84,7 @@ if w &gt; h {
         }
     }
             
-    if global.itemrot == 90 || global.itemrot == 270 {
+    if obj_controller.itemrot == 90 || obj_controller.itemrot == 270 {
         for (i=0; i &lt; wcells; i++) {
             with (instance_create(x-32, y+(32*i), obj_seat)) {
                 angle = 0;  
@@ -126,7 +126,7 @@ if w &lt; h {
     }
     // if square table
 } else {
-    if global.itemrot == 90 || global.itemrot == 270 {
+    if obj_controller.itemrot == 90 || obj_controller.itemrot == 270 {
         for (i=0; i &lt; hcells; i++) {
             with (instance_create(x+(32*i), y-32, obj_server_table_spot)) {
                 angle = 270;
@@ -139,7 +139,7 @@ if w &lt; h {
         }
     }
             
-    if global.itemrot == 0 || global.itemrot == 180 {
+    if obj_controller.itemrot == 0 || obj_controller.itemrot == 180 {
         for (i=0; i &lt; wcells; i++) {
             with (instance_create(x-32, y+(32*i), obj_server_table_spot)) {
                 angle = 0;  
@@ -310,7 +310,7 @@ obj_controller.alarm[3] = 1;
 
 draw_self();
 
-if global.showdebug {
+if obj_controller.showdebug {
     draw_text(x, y, "cap: " + string(capacity));
 }
 </string>

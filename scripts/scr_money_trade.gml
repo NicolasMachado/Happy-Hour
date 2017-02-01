@@ -3,7 +3,7 @@
 with (instance_create(argument0,argument1, obj_trade)) {
     amount = argument2;
     reason = argument3;
-    global.money += amount; 
+    obj_controller.money += amount; 
     
     // sound
     if amount > 0 {
@@ -13,7 +13,7 @@ with (instance_create(argument0,argument1, obj_trade)) {
 }
 
 // if player not doing well, give money once
-if global.money < -500 {   
+if obj_controller.money < -500 {   
     scr_UI_message_box(3);
     scr_UI_message_box(4);
 }

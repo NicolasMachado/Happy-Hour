@@ -2,11 +2,11 @@
 
 // MOVE THIS BLOCK TO CLICK BUTTON!
 if view_visible[1] {view_visible[1] = false;}
-if global.selected != "" {global.selected = "";}
+if obj_controller.selected != "" {obj_controller.selected = "";}
 
 // ALL
 // sprite string construction
-sprite = sprite_get_name(object_get_sprite(global.selecteditem));
+sprite = sprite_get_name(object_get_sprite(obj_controller.selecteditem));
 sprite = asset_get_index(sprite);
 
 sprwidth = (sprite_get_width(sprite) - sprite_get_xoffset(sprite)*2);
@@ -19,10 +19,10 @@ spry = floor((mouse_y+48)/32)*32-16;
 // set transparency color according to collision
 if collision_rectangle(sprx-5, spry-5, sprx + 5, spry + 5, obj_toavoid, false, false) {
     var color = c_red;
-    global.placeable = false;
+    obj_controller.placeable = false;
 } else {
     var color = c_white;
-    global.placeable = true;
+    obj_controller.placeable = true;
 }
 
 // draw sprite under mouse

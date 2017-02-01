@@ -28,6 +28,14 @@
             <string>/// INIT
 
 accel = 1;
+finalpositionx = view_wview[0]/2 - 300;
+
+image_speed = 0;
+if obj_button_lv1.gold &amp;&amp; obj_button_lv2.gold &amp;&amp; obj_button_lv3.gold &amp;&amp; obj_button_lv4.gold {
+    image_index = 1;
+} else {
+    image_index = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -52,9 +60,10 @@ accel = 1;
             <kind>1</kind>
             <string>/// move to center
 
-if 20 + accel &gt;= 0 {
-    accel -= 0.28;
-    x+= 20+accel;
+accel = (finalpositionx - x)/30+.5;
+
+if x &lt;  finalpositionx{
+    x+= accel;
 }
 </string>
           </argument>
@@ -81,7 +90,7 @@ if 20 + accel &gt;= 0 {
             <string>/// fade
 draw_self();
 
-image_alpha = global.fadealpha;
+image_alpha = obj_controller_main_menu.fadealpha;
 </string>
           </argument>
         </arguments>

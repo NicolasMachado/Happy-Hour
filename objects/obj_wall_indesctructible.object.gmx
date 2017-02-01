@@ -98,44 +98,176 @@ switch (i)
     
     default: image_index = 0 ; break;
 }
- 
-if x=448 &amp;&amp; y == 832 {
-    image_index = 13;
-    sprite_set_offset(self, 0, -16);
-}
-if x=480 &amp;&amp; y == 832 {
-    image_index = 14;
-    sprite_set_offset(self, 0, -16);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Windows
+
+// LEVEL 1
+if obj_controller.currentlevel == "level_1" {
+    if x=448 &amp;&amp; y == 640 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }
+    if x=480 &amp;&amp; y == 640 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
+    
+    if x=256 &amp;&amp; y == 256 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }
+    if x=288 &amp;&amp; y == 256 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
 }
 
- 
-if x=192 &amp;&amp; y == 288 {
-    image_index = 13;
-    sprite_set_offset(self, 0, -16);
-}
-if x=224 &amp;&amp; y == 288 {
-    image_index = 14;
-    sprite_set_offset(self, 0, -16);
+// LEVEL 2
+if obj_controller.currentlevel == "level_2" {
+    if x=416 &amp;&amp; y == 736 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }
+    if x=448 &amp;&amp; y == 736 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
+    
+    if x=480 &amp;&amp; y == 288 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }
+    if x=512 &amp;&amp; y == 288 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
 }
 
- 
-if x=480 &amp;&amp; y == 64 {
-    image_index = 13;
-    sprite_set_offset(self, 0, -16);
-}
-if x=512 &amp;&amp; y == 64 {
-    image_index = 14;
-    sprite_set_offset(self, 0, -16);
+// LEVEL 3
+if obj_controller.currentlevel == "level_3" {
+    if x=448 &amp;&amp; y == 832 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }
+    if x=480 &amp;&amp; y == 832 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
+    
+     
+    if x=192 &amp;&amp; y == 288 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }
+    if x=224 &amp;&amp; y == 288 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
+    
+     
+    if x=480 &amp;&amp; y == 64 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }
+    if x=512 &amp;&amp; y == 64 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
+    
+     
+    if x=800 &amp;&amp; y == 832 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }
+    if x=832 &amp;&amp; y == 832 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
 }
 
- 
-if x=800 &amp;&amp; y == 832 {
-    image_index = 13;
-    sprite_set_offset(self, 0, -16);
-}
-if x=832 &amp;&amp; y == 832 {
-    image_index = 14;
-    sprite_set_offset(self, 0, -16);
+// LEVEL 4
+if obj_controller.currentlevel == "level_4" {
+    if x=896 &amp;&amp; y == 576 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }
+    if x=928 &amp;&amp; y == 576 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
+    
+    if x=1184 &amp;&amp; y == 576 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }
+    if x=1216 &amp;&amp; y == 576 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
+    
+    if x=736 &amp;&amp; y == 832 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }    
+    if x=768 &amp;&amp; y == 832 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
+    
+    if x=320 &amp;&amp; y == 832 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }    
+    if x=352 &amp;&amp; y == 832 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
+    
+    if x=288 &amp;&amp; y == 64 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }    
+    if x=320 &amp;&amp; y == 64 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
+    
+    if x=736 &amp;&amp; y == 64 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }    
+    if x=768 &amp;&amp; y == 64 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
+    
+    if x=1120 &amp;&amp; y == 64 {
+        image_index = 13;
+        sprite_set_offset(self, 0, -16);
+    }    
+    if x=1152 &amp;&amp; y == 64 {
+        image_index = 14;
+        sprite_set_offset(self, 0, -16);
+    }
 }
 </string>
           </argument>

@@ -1,5 +1,5 @@
 /// scr_state_waitfordrink
-if !global.gamepause {
+if !obj_controller.gamepause {
     wantstoleave += 0.03;
     haswaited += 1/room_speed;
     image_index = 0;
@@ -10,7 +10,7 @@ if !global.gamepause {
     if wantstoleave > thirstceiling-thirst {
         wantstoleave = 101;
         scr_action_pause(10, "I've been waiting for too long, I'm out!");
-        global.leftwaitedtoolong++;
+        obj_controller.leftwaitedtoolong++;
         exit;   
     }
     

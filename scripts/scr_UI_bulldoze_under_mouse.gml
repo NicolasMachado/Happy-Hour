@@ -11,7 +11,7 @@ if (inst && !position_meeting(mouse_x, mouse_y, obj_button) && !position_meeting
     var offy = sprite_get_yoffset(object_get_sprite(nameobj))*2;
     
     // clear from grid
-    mp_grid_clear_rectangle(global.grid, inst.x, inst.y, inst.x + inst.sprite_width - offx - 1, inst.y + inst.sprite_height - offy - 1);   
+    mp_grid_clear_rectangle(obj_grid.grid, inst.x, inst.y, inst.x + inst.sprite_width - offx - 1, inst.y + inst.sprite_height - offy - 1);   
     with (inst) { instance_destroy(); }
     
     // WALL

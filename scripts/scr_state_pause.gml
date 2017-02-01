@@ -1,5 +1,5 @@
 /// scr_state_pause()
 
-if !global.gamepause {
+if !obj_controller.gamepause {
     image_index = 0;
 }

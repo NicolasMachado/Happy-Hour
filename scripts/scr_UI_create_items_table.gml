@@ -1,139 +1,137 @@
 ///scr_UI_create_items_table()
 
-global.itemlistcount = 0;
-
 // 0
-global.items[0,global.itemlistcount] = obj_bar_normal; // reference object
-global.items[1,global.itemlistcount] = "Basic Counter"; // name
-global.items[2,global.itemlistcount] = 575; // price
-global.items[3,global.itemlistcount] = 1.2; // wealth
-global.items[4,global.itemlistcount] = 6; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_bar_normal; // reference object
+items[1,itemlistcount] = "Basic Counter"; // name
+items[2,itemlistcount] = 575; // price
+items[3,itemlistcount] = 1.2; // wealth
+items[4,itemlistcount] = 6; // multiplier
+itemlistcount++;
 
 // 1
-global.items[0,global.itemlistcount] = obj_table_1x1; // reference object
-global.items[1,global.itemlistcount] = "Adam and Eve (1x1)"; // name
-global.items[2,global.itemlistcount] = 45; // price
-global.items[3,global.itemlistcount] = 1; // wealth
-global.items[4,global.itemlistcount] = 2; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_table_1x1; // reference object
+items[1,itemlistcount] = "Adam and Eve (1x1)"; // name
+items[2,itemlistcount] = 45; // price
+items[3,itemlistcount] = 1; // wealth
+items[4,itemlistcount] = 2; // multiplier
+itemlistcount++;
 
 // 2
-global.items[0,global.itemlistcount] = obj_table_2x2; // reference object
-global.items[1,global.itemlistcount] = "The Square (2x2)"; // name
-global.items[2,global.itemlistcount] = 75; // price
-global.items[3,global.itemlistcount] = 1; // wealth
-global.items[4,global.itemlistcount] = 4; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_table_2x2; // reference object
+items[1,itemlistcount] = "The Square (2x2)"; // name
+items[2,itemlistcount] = 75; // price
+items[3,itemlistcount] = 1; // wealth
+items[4,itemlistcount] = 4; // multiplier
+itemlistcount++;
 
 // 3
-global.items[0,global.itemlistcount] = obj_chair_simple; // reference object
-global.items[1,global.itemlistcount] = "Simple chair"; // name
-global.items[2,global.itemlistcount] = 25; // price
-global.items[3,global.itemlistcount] = 1; // wealth
-global.items[4,global.itemlistcount] = 1; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_chair_simple; // reference object
+items[1,itemlistcount] = "Simple chair"; // name
+items[2,itemlistcount] = 25; // price
+items[3,itemlistcount] = 1; // wealth
+items[4,itemlistcount] = 1; // multiplier
+itemlistcount++;
 
 // 4
-global.items[0,global.itemlistcount] = obj_table_2x2_1; // reference object
-global.items[1,global.itemlistcount] = "Night Owl (2x2)"; // name
-global.items[2,global.itemlistcount] = 275; // price
-global.items[3,global.itemlistcount] = 2.5; // wealth
-global.items[4,global.itemlistcount] = 4; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_table_2x2_1; // reference object
+items[1,itemlistcount] = "Night Owl (2x2)"; // name
+items[2,itemlistcount] = 275; // price
+items[3,itemlistcount] = 2.5; // wealth
+items[4,itemlistcount] = 4; // multiplier
+itemlistcount++;
 
 // 5
-global.items[0,global.itemlistcount] = obj_table_3x2; // reference object
-global.items[1,global.itemlistcount] = "Wood Chop (3x2)"; // name
-global.items[2,global.itemlistcount] = 190; // price
-global.items[3,global.itemlistcount] = 1.5; // wealth
-global.items[4,global.itemlistcount] = 6; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_table_3x2; // reference object
+items[1,itemlistcount] = "Wood Chop (3x2)"; // name
+items[2,itemlistcount] = 190; // price
+items[3,itemlistcount] = 1.5; // wealth
+items[4,itemlistcount] = 6; // multiplier
+itemlistcount++;
 
 // 6
-global.items[0,global.itemlistcount] = obj_toilet_simple; // reference object
-global.items[1,global.itemlistcount] = "Simple bathroom stall"; // name
-global.items[2,global.itemlistcount] = 55; // price
-global.items[3,global.itemlistcount] = 1; // wealth
-global.items[4,global.itemlistcount] = 1; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_toilet_simple; // reference object
+items[1,itemlistcount] = "Simple bathroom stall"; // name
+items[2,itemlistcount] = 55; // price
+items[3,itemlistcount] = 1; // wealth
+items[4,itemlistcount] = 1; // multiplier
+itemlistcount++;
 
 // 7
-global.items[0,global.itemlistcount] = obj_table_3x2_1; // reference object
-global.items[1,global.itemlistcount] = "Jhonny Sack (3x2)"; // name
-global.items[2,global.itemlistcount] = 585; // price
-global.items[3,global.itemlistcount] = 2.5; // wealth
-global.items[4,global.itemlistcount] = 6; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_table_3x2_1; // reference object
+items[1,itemlistcount] = "Jhonny Sack (3x2)"; // name
+items[2,itemlistcount] = 585; // price
+items[3,itemlistcount] = 2.5; // wealth
+items[4,itemlistcount] = 6; // multiplier
+itemlistcount++;
 
 // 8
-global.items[0,global.itemlistcount] = obj_table_3x2_2; // reference object
-global.items[1,global.itemlistcount] = "Assembly Deluxe (3x2)"; // name
-global.items[2,global.itemlistcount] = 1490; // price
-global.items[3,global.itemlistcount] = 5; // wealth
-global.items[4,global.itemlistcount] = 6; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_table_3x2_2; // reference object
+items[1,itemlistcount] = "Assembly Deluxe (3x2)"; // name
+items[2,itemlistcount] = 1490; // price
+items[3,itemlistcount] = 5; // wealth
+items[4,itemlistcount] = 6; // multiplier
+itemlistcount++;
 
 // 9
-global.items[0,global.itemlistcount] = obj_table_2x2_2; // reference object
-global.items[1,global.itemlistcount] = "Cardinal (2x2)"; // name
-global.items[2,global.itemlistcount] = 795; // price
-global.items[3,global.itemlistcount] = 5; // wealth
-global.items[4,global.itemlistcount] = 4; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_table_2x2_2; // reference object
+items[1,itemlistcount] = "Cardinal (2x2)"; // name
+items[2,itemlistcount] = 795; // price
+items[3,itemlistcount] = 5; // wealth
+items[4,itemlistcount] = 4; // multiplier
+itemlistcount++;
 
 // 10
-global.items[0,global.itemlistcount] = obj_table_1x1_1; // reference object
-global.items[1,global.itemlistcount] = "Black Mirror (1x1)"; // name
-global.items[2,global.itemlistcount] = 325; // price
-global.items[3,global.itemlistcount] = 5; // wealth
-global.items[4,global.itemlistcount] = 2; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_table_1x1_1; // reference object
+items[1,itemlistcount] = "Black Mirror (1x1)"; // name
+items[2,itemlistcount] = 325; // price
+items[3,itemlistcount] = 5; // wealth
+items[4,itemlistcount] = 2; // multiplier
+itemlistcount++;
 
 // 11
-global.items[0,global.itemlistcount] = obj_chair_1; // reference object
-global.items[1,global.itemlistcount] = "Dawn to Dusk"; // name
-global.items[2,global.itemlistcount] = 95; // price
-global.items[3,global.itemlistcount] = 3; // wealth
-global.items[4,global.itemlistcount] = 1; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_chair_1; // reference object
+items[1,itemlistcount] = "Dawn to Dusk"; // name
+items[2,itemlistcount] = 95; // price
+items[3,itemlistcount] = 3; // wealth
+items[4,itemlistcount] = 1; // multiplier
+itemlistcount++;
 
 // 12
-global.items[0,global.itemlistcount] = obj_chair_2; // reference object
-global.items[1,global.itemlistcount] = "King's Harmony"; // name
-global.items[2,global.itemlistcount] = 295; // price
-global.items[3,global.itemlistcount] = 5; // wealth
-global.items[4,global.itemlistcount] = 1; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_chair_2; // reference object
+items[1,itemlistcount] = "King's Harmony"; // name
+items[2,itemlistcount] = 295; // price
+items[3,itemlistcount] = 5; // wealth
+items[4,itemlistcount] = 1; // multiplier
+itemlistcount++;
 
 // 13
-global.items[0,global.itemlistcount] = obj_toilet_1; // reference object
-global.items[1,global.itemlistcount] = "Escape Plan"; // name
-global.items[2,global.itemlistcount] = 165; // price
-global.items[3,global.itemlistcount] = 3; // wealth
-global.items[4,global.itemlistcount] = 1; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_toilet_1; // reference object
+items[1,itemlistcount] = "Escape Plan"; // name
+items[2,itemlistcount] = 165; // price
+items[3,itemlistcount] = 3; // wealth
+items[4,itemlistcount] = 1; // multiplier
+itemlistcount++;
 
 // 14
-global.items[0,global.itemlistcount] = obj_toilet_2; // reference object
-global.items[1,global.itemlistcount] = "Baller's Minute"; // name
-global.items[2,global.itemlistcount] = 395; // price
-global.items[3,global.itemlistcount] = 5; // wealth
-global.items[4,global.itemlistcount] = 1; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_toilet_2; // reference object
+items[1,itemlistcount] = "Baller's Minute"; // name
+items[2,itemlistcount] = 395; // price
+items[3,itemlistcount] = 5; // wealth
+items[4,itemlistcount] = 1; // multiplier
+itemlistcount++;
 
 // 15
-global.items[0,global.itemlistcount] = obj_bar_2; // reference object
-global.items[1,global.itemlistcount] = "Comet Counter"; // name
-global.items[2,global.itemlistcount] = 1590; // price
-global.items[3,global.itemlistcount] = 2.8; // wealth
-global.items[4,global.itemlistcount] = 6; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_bar_2; // reference object
+items[1,itemlistcount] = "Comet Counter"; // name
+items[2,itemlistcount] = 1590; // price
+items[3,itemlistcount] = 2.8; // wealth
+items[4,itemlistcount] = 6; // multiplier
+itemlistcount++;
 
 // 16
-global.items[0,global.itemlistcount] = obj_bar_3; // reference object
-global.items[1,global.itemlistcount] = "Royal Counter"; // name
-global.items[2,global.itemlistcount] = 3950; // price
-global.items[3,global.itemlistcount] = 5; // wealth
-global.items[4,global.itemlistcount] = 7; // multiplier
-global.itemlistcount++;
+items[0,itemlistcount] = obj_bar_3; // reference object
+items[1,itemlistcount] = "Royal Counter"; // name
+items[2,itemlistcount] = 3950; // price
+items[3,itemlistcount] = 5; // wealth
+items[4,itemlistcount] = 7; // multiplier
+itemlistcount++;

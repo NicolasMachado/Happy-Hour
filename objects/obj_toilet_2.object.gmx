@@ -29,8 +29,8 @@
 
 // get info from global item array
 itemnumber = 14;
-name = global.items[1,itemnumber];
-price = global.items[2,itemnumber];
+name = obj_controller.items[1,itemnumber];
+price = obj_controller.items[2,itemnumber];
 var stallid = id;
 mytop = "";
 mydoor = "";
@@ -38,7 +38,7 @@ mydoor = "";
 event_inherited();
 
 // create "roof" and "door" objects
-if global.itemrot == 270 {
+if obj_controller.itemrot == 270 {
     depth = -y; 
     
     mydoor = instance_create(x, y, obj_toilet_2_door);

@@ -88,7 +88,7 @@ if !reachable {
             <string>/// Draw
 
 draw_self();
-if global.showdebug {
+if obj_controller.showdebug {
     draw_text(x+12, y+20, string(occupied));
 }
 

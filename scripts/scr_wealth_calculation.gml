@@ -19,34 +19,34 @@ var wealthtoilets = 0;
 
 // bars wealth
 for (i=0; i<nbbars; i++) {
-    repeat ( global.items[4, instance_find(obj_bar, i).itemnumber] ) { // multiplier
-        wealthbars += global.items[3, instance_find(obj_bar, i).itemnumber]; // add wealth
+    repeat ( obj_controller.items[4, instance_find(obj_bar, i).itemnumber] ) { // multiplier
+        wealthbars += obj_controller.items[3, instance_find(obj_bar, i).itemnumber]; // add wealth
     }
-    barsdivisor += global.items[4, instance_find(obj_bar, i).itemnumber];
+    barsdivisor += obj_controller.items[4, instance_find(obj_bar, i).itemnumber];
 }
 
 // tables wealth
 for (i=0; i<nbtables; i++) {
-    repeat ( global.items[4, instance_find(obj_table, i).itemnumber] ) { // multiplier
-        wealthtables += global.items[3, instance_find(obj_table, i).itemnumber]; // add wealth
+    repeat ( obj_controller.items[4, instance_find(obj_table, i).itemnumber] ) { // multiplier
+        wealthtables += obj_controller.items[3, instance_find(obj_table, i).itemnumber]; // add wealth
     }
-    tablesdivisor += global.items[4, instance_find(obj_table, i).itemnumber];
+    tablesdivisor += obj_controller.items[4, instance_find(obj_table, i).itemnumber];
 }
 
 // chairs wealth
 for (i=0; i<nbchairs; i++) {
-    repeat ( global.items[4, instance_find(obj_chair, i).itemnumber] ) { // multiplier
-        wealthchairs += global.items[3, instance_find(obj_chair, i).itemnumber]; // add wealth
+    repeat ( obj_controller.items[4, instance_find(obj_chair, i).itemnumber] ) { // multiplier
+        wealthchairs += obj_controller.items[3, instance_find(obj_chair, i).itemnumber]; // add wealth
     }
-    chairsdivisor += global.items[4, instance_find(obj_chair, i).itemnumber];
+    chairsdivisor += obj_controller.items[4, instance_find(obj_chair, i).itemnumber];
 }
 
 // toilet wealth
 for (i=0; i<nbtoilets; i++) {
-    repeat ( global.items[4, instance_find(obj_toilet, i).itemnumber] ) { // multiplier
-        wealthtoilets += global.items[3, instance_find(obj_toilet, i).itemnumber]; // add wealth
+    repeat ( obj_controller.items[4, instance_find(obj_toilet, i).itemnumber] ) { // multiplier
+        wealthtoilets += obj_controller.items[3, instance_find(obj_toilet, i).itemnumber]; // add wealth
     }
-    toiletdivisor += global.items[4, instance_find(obj_toilet, i).itemnumber];
+    toiletdivisor += obj_controller.items[4, instance_find(obj_toilet, i).itemnumber];
 }
 
 if wealthbars != 0 {
@@ -67,14 +67,14 @@ if wealthtoilets != 0 {
 }
 
 if finaldivisor != 0 {
-    global.wealth = (wealthbars*nbbars + wealthtables*nbtables + wealthchairs*nbchairs + wealthtoilets*nbtoilets) / (nbbars + nbtables + nbchairs + nbtoilets);
+    obj_controller.wealth = (wealthbars*nbbars + wealthtables*nbtables + wealthchairs*nbchairs + wealthtoilets*nbtoilets) / (nbbars + nbtables + nbchairs + nbtoilets);
 } else {
-    global.wealth = 1;
+    obj_controller.wealth = 1;
 }
 
 // salary wealth
 with (obj_server) {
-    salary = basesalary*(global.wealth/WEALTHDIV);
+    salary = basesalary*(obj_controller.wealth/WEALTHDIV);
 }
 
 scr_UI_create_drinks_table();

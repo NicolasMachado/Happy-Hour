@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// freeze objects + freeze alarms
 
-if global.gamepause {
+if obj_controller.gamepause {
     // Pause all alarms (up to 10) of all objects by incrementing every step if &gt; 0
     with (all) {
         for(var i = 0; i &lt;= 11; i++){
@@ -71,6 +71,9 @@ if global.gamepause {
             <string>/// PAUSE
 
 scr_gamepause();
+
+// play sound
+audio_play_sound(snd_menu_click, 1, 0); 
 </string>
           </argument>
         </arguments>

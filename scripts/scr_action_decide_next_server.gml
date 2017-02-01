@@ -23,15 +23,16 @@ if (intention == "serve") {
     // if table reached, serve
     else if (instance_exists(goal) && goaltype == "obj_server_table_spot" && position_meeting(x, y, goal) && customertoserve.myseat.tableID == goal.tableID ) {
         customertoserve.hasadrink = 1;
-        scr_money_trade(customertoserve.x, customertoserve.y-70, global.drinks[1, customertoserve.mydrink], global.drinks[0, customertoserve.mydrink]);
+        scr_money_trade(customertoserve.x, customertoserve.y-70, obj_controller.drinks[1, customertoserve.mydrink], obj_controller.drinks[0, customertoserve.mydrink]);
         customertoserve.waitingfordrink = false;       
         carrying -= 1;
         scr_action_experience(10);
         customertoserve = "";
         ds_priority_delete_max(listtoserve);  
+        obj_controller.nbserved++;
         
         // tuto messages  
-        if global.tutorial {
+        if obj_controller.tutorial {
             scr_UI_message_box(9);
             scr_UI_message_box(10);
             scr_UI_message_box(11);

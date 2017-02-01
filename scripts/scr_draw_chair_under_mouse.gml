@@ -4,12 +4,12 @@ var color = c_white;
 
 // MOVE THIS BLOCK TO CLICK BUTTON! *****
 if view_visible[1] {view_visible[1] = false;}
-if global.selected != "" {global.selected = "";}
+if obj_controller.selected != "" {obj_controller.selected = "";}
 
 
 // sprite string construction
-sprite = sprite_get_name(object_get_sprite(global.selecteditem));
-sprite = asset_get_index(string_replace(sprite, "_0", "_" + string(global.itemrot)));
+sprite = sprite_get_name(object_get_sprite(obj_controller.selecteditem));
+sprite = asset_get_index(string_replace(sprite, "_0", "_" + string(obj_controller.itemrot)));
 
 sprwidth = (sprite_get_width(sprite) - (sprite_get_xoffset(sprite)*2));
 sprheight = (sprite_get_height(sprite) - (sprite_get_yoffset(sprite)*2));
@@ -23,17 +23,17 @@ spry = floor((mouse_y - decaly - sprheight/2 + 16 + decaly)/32)*32;
 collspot = collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_seat, false, false);
     
 // set transparency color according to collision
-if collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_furniture_ghost, false, false) || collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_furniture, false, false) || scr_item_get_price(global.selecteditem) > global.money {
+if collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_furniture_ghost, false, false) || collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_furniture, false, false) || collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_no_construction, false, false) || collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, obj_occupy_grid, false, false) || scr_item_get_price(obj_controller.selecteditem) > obj_controller.money {
     color = c_red;
-    global.placeable = false;
+    obj_controller.placeable = false;
 } else if collspot{
 
     // if on a seat
     color = c_white;
-    global.placeable = true;  
-    global.itemrot = collspot.angle;
+    obj_controller.placeable = true;  
+    obj_controller.itemrot = collspot.angle;
     
-    sprite = sprite_get_name(object_get_sprite(global.selecteditem));
+    sprite = sprite_get_name(object_get_sprite(obj_controller.selecteditem));
     sprite = asset_get_index(string_replace(sprite, "_0", "_" + string(collspot.angle)));
     
     sprwidth = (sprite_get_width(sprite) - sprite_get_xoffset(sprite)*2);
@@ -47,7 +47,7 @@ if collision_rectangle(sprx, spry, sprx + sprwidth - 1, spry + sprheight - 1, ob
     
  } else {
     color = c_red;
-    global.placeable = false;
+    obj_controller.placeable = false;
 }
 
 // draw sprite under mouse

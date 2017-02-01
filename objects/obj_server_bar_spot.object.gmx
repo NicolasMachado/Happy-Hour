@@ -34,7 +34,7 @@ activated = 1;
 
 // tableID inherited from table creation
 
-if mp_grid_path(global.grid, global.spawner.path, global.spawner.x, global.spawner.y, x+16, y+16, 1) {
+if mp_grid_path(obj_grid.grid, obj_controller.spawner.path, obj_controller.spawner.x, obj_controller.spawner.y, x+16, y+16, 1) {
     reachable = 1;
 }
 
@@ -115,7 +115,7 @@ if !reachable {
             <string>/// DRAW
 
 draw_self();
-if global.showdebug {
+if obj_controller.showdebug {
     draw_text(x+12, y+20, 
     //"A: " + string(activated) + "#" +
     //"R: " + string(reachable) + "#" +

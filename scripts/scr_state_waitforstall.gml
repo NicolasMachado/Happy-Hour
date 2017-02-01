@@ -1,5 +1,5 @@
 /// scr_state_waitforstall
-if !global.gamepause {
+if !obj_controller.gamepause {
     wantstoleave += 0.03;
     haswaited += 1/room_speed;
     image_index = 0;

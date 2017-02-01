@@ -29,8 +29,8 @@
 
 // get info from global item array
 itemnumber = 10;
-name = global.items[1,itemnumber];
-price = global.items[2,itemnumber];
+name = obj_controller.items[1,itemnumber];
+price = obj_controller.items[2,itemnumber];
 
 event_inherited();
 </string>

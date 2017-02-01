@@ -38,9 +38,9 @@ image_speed = 0;
 // get info from global item array
 itemnumber = 2;
 
-selection = global.items[0,itemnumber];
-name = global.items[1,itemnumber];
-price = global.items[2,itemnumber];
+selection = obj_controller.items[0,itemnumber];
+name = obj_controller.items[1,itemnumber];
+price = obj_controller.items[2,itemnumber];
 mycolor = "";
 
 tooltiptext = string(name + "#$" + string(price));
@@ -71,7 +71,7 @@ buttonsprite = object_get_sprite(selection);
             <kind>1</kind>
             <string>/// follow the GUI
 
-if global.selectedmenu == myparent {
+if obj_controller.selectedmenu == myparent {
     
     x = myparent.x + ((gap*SCALE)*(buttonum+1));
     y = myparent.y; 
@@ -109,7 +109,7 @@ if global.selectedmenu == myparent {
             <string>/// draw
 
 // if can't afford
-if price &gt; global.money {
+if price &gt; obj_controller.money {
      image_index = 1;
      mycolor = c_black;
 } else {

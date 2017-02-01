@@ -1,8 +1,8 @@
 /// pause unpause the game
 
 // IF PAUSE
-if !global.gamepause {
-    global.gamepause = true;
+if !obj_controller.gamepause {
+    obj_controller.gamepause = true;
     obj_button_pause.tooltiptext = "The game is paused";  
     // freeze animation and record path position
     with (obj_server) {
@@ -16,7 +16,7 @@ if !global.gamepause {
 }
 // IF UNPAUSE
 else {
-    global.gamepause = false;    
+    obj_controller.gamepause = false;    
     obj_button_pause.tooltiptext = "Pause#Currently OFF";
     // Reanimate characters
     with (obj_server) {

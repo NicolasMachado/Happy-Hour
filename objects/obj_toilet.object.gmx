@@ -42,7 +42,7 @@ myspot = instance_create(x, y, obj_toilet_spot);
 myspot.mystallID = myID;
 
 
-if global.itemrot == 270 {
+if obj_controller.itemrot == 270 {
     depth = -y;
 }
 

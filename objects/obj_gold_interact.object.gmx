@@ -29,12 +29,15 @@
 
 depth = -999999;
 
+medaltype = "Gold";
 tooltiptext = ""; // check alarm for text
 
-balance = 15000;
-wealth = 400;
-reputation = 4.5;
-waittime = 3;
+goalserve = 99999999;
+balance = 99999999;
+wealth = 99999999;
+reputation = 99999999;
+waittime = -1;
+nbseats = -1;
 
 // update text
 alarm[0] = room_speed/2;
@@ -60,14 +63,8 @@ alarm[0] = room_speed/2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// update text
-if global.goldmedal == 0 {
-    tooltiptext = "Gold medal##To earn this medal you need:##þ At least $" + string(balance) + " in the bank#þ An average waiting time inferior to " + string(waittime) + " minutes#þ A wealth score superior to " + string(wealth) + "#þ A reputation rating superior to " + string(reputation) + " stars";
-} else {
-    tooltiptext = "You have earned the gold medal";    
-}
-
-alarm[0] = room_speed/2;
+            <string>/// update medal text script
+scr_UI_update_medal_text();
 </string>
           </argument>
         </arguments>

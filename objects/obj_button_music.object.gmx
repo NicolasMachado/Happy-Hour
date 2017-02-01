@@ -29,7 +29,13 @@
 
 depth = -999999;
 
-tooltiptext = "Music#Currently ON";
+if global.music == 0 {
+    tooltiptext = "Music#Currently OFF";
+    audio_group_set_gain(Music_gen, 0, 1);
+} else {
+    tooltiptext = "Music#Currently ON";
+    audio_group_set_gain(Music_gen, 100, 0); 
+}
 </string>
           </argument>
         </arguments>
@@ -54,7 +60,7 @@ tooltiptext = "Music#Currently ON";
             <kind>1</kind>
             <string>/// Follow the GUI
 
-x = view_xview[0] + (view_wport[0]/1.08*SCALE);
+x = view_xview[0] + (obj_controller.posoptions-30*2)*SCALE;
 y = view_yview[0] + ((obj_controller.blackbarsize/2)+1)*SCALE;
 
 // Scale
@@ -88,13 +94,25 @@ event_inherited();
 
 global.music = 1 - global.music;
 
-//if messages deactivated
+//if music deactivated
 if global.music == 0 {
     tooltiptext = "Music#Currently OFF";
     audio_group_set_gain(Music_gen, 0, 1);
+    
+    // save
+    ini_open("conf.ini");
+    ini_write_real("config", "music", 0);
+    ini_close();
+    
 } else {
     tooltiptext = "Music#Currently ON";   
     audio_group_set_gain(Music_gen, 100, 0); 
+    
+    // save
+    ini_open("conf.ini");
+    ini_write_real("config", "music", 1);
+    ini_close();
+    
 }
 
 // play sound

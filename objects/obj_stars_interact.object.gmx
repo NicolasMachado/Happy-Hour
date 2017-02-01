@@ -55,7 +55,7 @@ alarm[0] = room_speed/2;
           <argument>
             <kind>1</kind>
             <string>/// update reputation
-var rep = global.reputation;
+var rep = obj_controller.reputation;
 var flavortxt = "";
 
 // flavor text

@@ -219,7 +219,12 @@
       <sprite>sprites\spr_smileys</sprite>
       <sprite>sprites\spr_pause_button</sprite>
       <sprite>sprites\spr_unpause_button</sprite>
+      <sprite>sprites\spr_quit_to_main</sprite>
+      <sprite>sprites\spr_quit_game</sprite>
+      <sprite>sprites\spr_fullscreen</sprite>
+      <sprite>sprites\spr_resolution</sprite>
       <sprite>sprites\spr_medals</sprite>
+      <sprite>sprites\spr_medals_mmenu</sprite>
     </sprites>
     <sprites name="Main Menu">
       <sprite>sprites\spr_start_button</sprite>
@@ -241,6 +246,11 @@
     <background>background\bk_main_tile_1</background>
     <background>background\bk_tile_wood</background>
     <background>background\bk_tile_main_menu</background>
+    <background>background\bk_tile_1</background>
+    <background>background\bk_tile_2</background>
+    <background>background\bk_tile_3</background>
+    <background>background\bk_tile_4</background>
+    <background>background\bk_fence</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -267,6 +277,8 @@
       <script>scripts\scr_UI_dismiss_message.gml</script>
       <script>scripts\scr_UI_create_messages_table.gml</script>
       <script>scripts\scr_UI_add_offtutorial_buttons.gml</script>
+      <script>scripts\scr_UI_unlock_medal.gml</script>
+      <script>scripts\scr_UI_update_medal_text.gml</script>
     </scripts>
     <scripts name="state">
       <script>scripts\scr_state_drink.gml</script>
@@ -305,14 +317,21 @@
     <script>scripts\scr_update_grid.gml</script>
     <script>scripts\scr_spots.gml</script>
     <script>scripts\scr_get_random_name.gml</script>
+    <script>scripts\scr_set_spawn_timer.gml</script>
     <script>scripts\scr_gamepause.gml</script>
+    <scripts name="Save and Load">
+      <script>scripts\scr_save.gml</script>
+      <script>scripts\scr_load.gml</script>
+      <script>scripts\scr_initialize_ini.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\debugfont</font>
     <font>fonts\UI</font>
-    <font>fonts\UI_tooltip_save</font>
+    <font>fonts\UI_big</font>
     <font>fonts\UI_tooltip</font>
-    <font>fonts\UI_2</font>
+    <font>fonts\UI_tooltip_big</font>
+    <font>fonts\UI_balance</font>
     <font>fonts\trades</font>
   </fonts>
   <objects name="objects">
@@ -393,6 +412,7 @@
       <object>objects\obj_fade_screen</object>
       <object>objects\obj_listener</object>
       <object>objects\obj_pause</object>
+      <object>objects\obj_display_manager</object>
     </objects>
     <objects name="UI">
       <object>objects\obj_touch_box</object>
@@ -446,13 +466,23 @@
           <object>objects\obj_button_SFX</object>
           <object>objects\obj_button_music</object>
           <object>objects\obj_button_pause</object>
+          <object>objects\obj_button_quit</object>
         </objects>
       </objects>
     </objects>
     <objects name="Main menu">
       <object>objects\obj_logo1</object>
       <object>objects\obj_logo2</object>
+      <object>objects\obj_button_SFX_mm</object>
+      <object>objects\obj_button_music_mm</object>
       <object>objects\obj_start_button</object>
+      <object>objects\obj_button_lv1</object>
+      <object>objects\obj_button_lv2</object>
+      <object>objects\obj_button_lv3</object>
+      <object>objects\obj_button_lv4</object>
+      <object>objects\obj_button_resolution_mm</object>
+      <object>objects\obj_button_fullscreen_mm</object>
+      <object>objects\obj_button_quit_mm</object>
       <object>objects\obj_controller_main_menu</object>
       <object>objects\obj_main_menu_text</object>
       <object>objects\obj_main_menu_bubble</object>
@@ -460,14 +490,18 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm__display</room>
     <room>rooms\rm_mainmenu</room>
-    <room>rooms\rm_main_large</room>
-    <room>rooms\rm_main</room>
+    <room>rooms\rm_lv1</room>
+    <room>rooms\rm_lv2</room>
+    <room>rooms\rm_lv3</room>
+    <room>rooms\rm_lv4</room>
+    <room>rooms\rm_main_large_save</room>
   </rooms>
   <constants number="3">
     <constant name="WEALTHDIV">2</constant>
-    <constant name="SCALE">global.zoom_scale_w</constant>
-    <constant name="MESSAGE">global.messageinprogress</constant>
+    <constant name="SCALE">obj_controller.zoom_scale_w</constant>
+    <constant name="MESSAGE">obj_controller.messageinprogress</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

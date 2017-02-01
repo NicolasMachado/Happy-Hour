@@ -4,7 +4,11 @@ var str = argument0;
 var stroutput = "";
 var lastspace = 0;
 var maxwidth = 600;
-draw_set_font(UI);
+if global.lowres {
+    draw_set_font(UI);
+} else {
+    draw_set_font(UI_big);    
+}
 
 // construct output strings with linebreaks
 for (i=1; i <= string_length(str); i++) {

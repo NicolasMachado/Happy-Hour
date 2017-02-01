@@ -80,7 +80,7 @@ if (intention == "toilet") {
             else {
                 wantstoleave = 101;
                 
-                global.leftnotoilet++;
+                obj_controller.leftnotoilet++;
                 scr_move_to_destroy();
             }
         }

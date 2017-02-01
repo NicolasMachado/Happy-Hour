@@ -2,6 +2,6 @@
 
 for (i=3; i>=0; i--)
 {
-    global.log[i+1] = global.log[i];
+    obj_controller.log[i+1] = obj_controller.log[i];
 }
-global.log[0] = string(self.id) + ": " + argument0;
+obj_controller.log[0] = string(self.id) + ": " + argument0;

@@ -29,9 +29,12 @@
 
 buttonum = -1000;
 selection = "";
-
-menuposx = 20;
-menuposy = 200;
+if !global.lowres {
+    menuposx = 20;
+} else {
+    menuposx = 10;
+}
+menuposy = view_hport[0]/2 - 180;
 gap = 55;
 ygap = 55;
 rank = 0;
@@ -148,12 +151,12 @@ if !point_in_rectangle(mouse_x, mouse_y, view_xview[1], view_yview[1], view_xvie
 if !point_in_rectangle(mouse_x, mouse_y, view_xview[1], view_yview[1], view_xview[1]+view_wview[1], view_yview[1]+view_hview[1]) {
     // if the button is to select an item
     if selection != "" {
-        if price &lt;= global.money || price == 0 {
-            global.selecteditem = selection;
-            global.selectedmenu = "";
+        if price &lt;= obj_controller.money || price == 0 {
+            obj_controller.selecteditem = selection;
+            obj_controller.selectedmenu = "";
             
             if view_visible[1] {view_visible[1] = false;}
-            if global.selected != "" {global.selected = "";}
+            if obj_controller.selected != "" {obj_controller.selected = "";}
             
             audio_play_sound(snd_menu_click, 1, 0); 
         } else {        
@@ -161,14 +164,14 @@ if !point_in_rectangle(mouse_x, mouse_y, view_xview[1], view_yview[1], view_xvie
         }
     // if it's to open a submenu
     } else {
-        if global.selectedmenu != id {
-            global.selectedmenu = id;
-            global.selecteditem = "";   
-            global.selected = "";
+        if obj_controller.selectedmenu != id {
+            obj_controller.selectedmenu = id;
+            obj_controller.selecteditem = "";   
+            obj_controller.selected = "";
             view_visible[1] = false;
             audio_play_sound(snd_menu_click, 1, 0);     
         } else {
-            global.selectedmenu = "";
+            obj_controller.selectedmenu = "";
             audio_play_sound(snd_menu_click, 1, 0);   
         }
     }
@@ -202,10 +205,10 @@ if (view_current == 0) {
 }
 
 if collision_point(mouse_x, mouse_y, self, false, false) {
-    if price &lt; global.money {
-        image_blend = global.buttonblendcolor;
+    if price &lt; obj_controller.money {
+        image_blend = obj_controller.buttonblendcolor;
     } else {
-        image_blend = global.buttonblendcolor2;
+        image_blend = obj_controller.buttonblendcolor2;
     }
 } else {   
     image_blend = c_white;

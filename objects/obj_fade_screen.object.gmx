@@ -29,7 +29,7 @@
 draw_self();
 
 if room_get_name(room) == "rm_mainmenu" {
-    image_alpha = -global.fadealpha;
+    image_alpha = -obj_controller_main_menu.fadealpha;
 } else {
     image_alpha -= 0.02;
     if image_alpha &lt; 0 {

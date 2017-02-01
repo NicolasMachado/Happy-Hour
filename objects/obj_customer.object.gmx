@@ -72,7 +72,7 @@ angryfacecolor = make_color_rgb(252, 71, 71);
 
 
 var chancetobeclient = 80; // percentage of chance to be a potential client
-mydrink = irandom_range(0, global.drinklistcount-1); // choose my drink in global drinklist
+mydrink = irandom_range(0, obj_controller.drinklistcount-1); // choose my drink in global drinklist
 
 // NEEDS
 thirst = irandom_range(0, 50); // when thirst is low, customer wants to drink
@@ -158,8 +158,8 @@ drinkcolor = choose(spr_customer_normal_1_r_drink_glass, spr_customer_normal_1_r
             <kind>1</kind>
             <string>/// remove window view
 
-if global.selected == self.id {
-    global.selected = "";
+if obj_controller.selected == self.id {
+    obj_controller.selected = "";
     view_visible[1] = false;
 }
 </string>
@@ -202,17 +202,17 @@ if client {
     // multiplier (curve the progression of reputation)
     
     // if global.rep is low
-    if global.reputation &lt; 50 {
+    if obj_controller.reputation &lt; 50 {
         if addreputation &lt; 0 { // if losing rep
-            multiplier = global.reputation*2/100; // between 0 and 1
+            multiplier = obj_controller.reputation*2/100; // between 0 and 1
         } else { // if gaining rep (boost)
-            multiplier = 1-((global.reputation-30)*2/100); // between 0 and 1            
+            multiplier = 1-((obj_controller.reputation-30)*2/100); // between 0 and 1            
         }
     } else { // if global rep is high
         if addreputation &gt;= 0 { // if gaining rep
-            multiplier = 1-((global.reputation-50)*2/100);
+            multiplier = 1-((obj_controller.reputation-50)*2/100);
         } else { // if losing rep (boost)
-            multiplier = (global.reputation-30)*2/100; // between 0 and 1            
+            multiplier = (obj_controller.reputation-30)*2/100; // between 0 and 1            
         }
     }
     
@@ -221,15 +221,15 @@ if client {
     if fired {
         addreputation -= 5;
     }
-    global.reputation += addreputation;
+    obj_controller.reputation += addreputation;
     
     
     
     // limits
-    if global.reputation &gt; 100 {
-        global.reputation = 99.99;
-    } else if global.reputation &lt;= 3 {
-        global.reputation = 3;
+    if obj_controller.reputation &gt; 100 {
+        obj_controller.reputation = 99.99;
+    } else if obj_controller.reputation &lt;= 3 {
+        obj_controller.reputation = 3;
     }
 }
 </string>
@@ -257,11 +257,11 @@ if client {
 var spawnerr = instance_find(obj_spawner_r, 0);
 var spawnerl = instance_find(obj_spawner_l, 0);
 
-spawnerr.mintime = spawnerr.originalmintime/(global.reputation/100);
-spawnerr.maxtime = spawnerr.originalmaxtime/(global.reputation/100);
+spawnerr.mintime = spawnerr.originalmintime/(obj_controller.reputation/100);
+spawnerr.maxtime = spawnerr.originalmaxtime/(obj_controller.reputation/100);
 
-spawnerl.mintime = spawnerl.originalmintime/(global.reputation/100);
-spawnerl.maxtime = spawnerl.originalmaxtime/(global.reputation/100);
+spawnerl.mintime = spawnerl.originalmintime/(obj_controller.reputation/100);
+spawnerl.maxtime = spawnerl.originalmaxtime/(obj_controller.reputation/100);
 </string>
           </argument>
         </arguments>
@@ -653,7 +653,7 @@ if state == scr_state_waitfordrink || state == scr_state_waitforstall {
           <argument>
             <kind>1</kind>
             <string>/// Debug
-if global.showdebug {
+if obj_controller.showdebug {
 /// Draw ALL
 if path_exists(path){
 draw_set_alpha(0.3);

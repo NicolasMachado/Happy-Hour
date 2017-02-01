@@ -1,13 +1,13 @@
 /// scr_state_drink
 
-if !global.gamepause {
+if !obj_controller.gamepause {
     // drinking
-    thirst += global.drinks[3, mydrink];
-    bladder += global.drinks[4, mydrink];
+    thirst += obj_controller.drinks[3, mydrink];
+    bladder += obj_controller.drinks[4, mydrink];
     wantstoleave -= 0.07;
     
     // drinking speed
-    hasadrink -= global.drinks[5, mydrink];
+    hasadrink -= obj_controller.drinks[5, mydrink];
     
     if hasadrink < 0 { 
         hasadrink = 0; 

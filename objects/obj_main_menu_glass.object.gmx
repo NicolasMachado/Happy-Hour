@@ -34,6 +34,15 @@ fade = 0;
 hasappeared = false;
 
 alarm[0] = irandom_range(timermini, timermax);
+
+
+
+image_speed = 0;
+if obj_button_lv1.gold &amp;&amp; obj_button_lv2.gold &amp;&amp; obj_button_lv3.gold &amp;&amp; obj_button_lv4.gold {
+    image_index = 1;
+} else {
+    image_index = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -84,7 +93,7 @@ if hasappeared {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !hasappeared {
+            <string>if !hasappeared &amp;&amp; !obj_controller_main_menu.isfading {
     fade += 0.05;
     if fade &gt;= 1 {
         fade = 1;
@@ -118,7 +127,7 @@ draw_self();
 image_alpha = fade;
 
 if hasappeared {
-    image_alpha = global.fadealpha;
+    image_alpha = obj_controller_main_menu.fadealpha;
 }
 </string>
           </argument>

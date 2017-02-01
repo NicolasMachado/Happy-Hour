@@ -1,5 +1,5 @@
 /// scr_state_toilet
-if !global.gamepause {
+if !obj_controller.gamepause {
     // toilet
     bladder -= 0.5; 
     wantstoleave -= 0.07;

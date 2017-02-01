@@ -55,19 +55,19 @@ tooltiptext = "Fire employee"; // check alarm for text
           <argument>
             <kind>1</kind>
             <string>/// Follow the GUI
-if global.selected != "" &amp;&amp; global.selected.iam == "customer" {
+if obj_controller.selected != "" &amp;&amp; obj_controller.selected.iam == "customer" {
     tooltiptext = "Kick out";
 } else {
     tooltiptext = "Fire employee";
 }
 
-if global.selected != "" &amp;&amp; !global.selected.fired  &amp;&amp; global.selected.intention != "leave" {
-    if global.selected.iam == "customer" &amp;&amp; global.selected.client {
-        x = view_xview[0] + 985*SCALE;
-        y = view_yview[0] + 200*SCALE;
-    } else if global.selected.iam == "server" {
-        x = view_xview[0] + 985*SCALE;
-        y = view_yview[0] + 210*SCALE;   
+if obj_controller.selected != "" &amp;&amp; !obj_controller.selected.fired  &amp;&amp; obj_controller.selected.intention != "leave" {
+    if obj_controller.selected.iam == "customer"/* &amp;&amp; obj_controller.selected.client*/ {
+        x = view_xview[0] + (obj_controller.view1_x + 120)*SCALE;
+        y = view_yview[0] + (obj_controller.view1_y + 160)*SCALE;
+    } else if obj_controller.selected.iam == "server" {
+        x = view_xview[0] + (obj_controller.view1_x + 120)*SCALE;
+        y = view_yview[0] + (obj_controller.view1_y + 170)*SCALE;
     }
 } else {
     x = -1000;
@@ -103,15 +103,15 @@ image_yscale = SCALE;
             <string>/// fire waiter or kick customer out
 audio_play_sound(snd_punch, 1, false);
 
-if global.selected.iam == "server" {
-    with global.selected {
+if obj_controller.selected.iam == "server" {
+    with obj_controller.selected {
         scr_UI_message_box(18);
         fired = 1;
         intention = "fired";
         scr_action_pause(1, "fired");
     }
-} else if global.selected.iam == "customer" {
-    with global.selected {
+} else if obj_controller.selected.iam == "customer" {
+    with obj_controller.selected {
         fired = 1;
         wantstoleave = 101;
         haswaited = 10;

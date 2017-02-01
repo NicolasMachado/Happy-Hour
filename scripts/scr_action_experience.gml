@@ -15,6 +15,6 @@ if level == 0 && experience > 200
     spd = spd + ((spd * 15)/100); // + multiplier% speed
     wit = wit + ((wit * 15)/100); // + multiplier% wit
     basesalary = (basesalary + ((basesalary*10)/100));
-    salary = basesalary*(global.wealth/WEALTHDIV);
+    salary = basesalary*(obj_controller.wealth/WEALTHDIV);
     cancarry++;
 }

@@ -1,5 +1,5 @@
 /// scr_state_make_drink
-if !global.gamepause {
+if !obj_controller.gamepause {
     image_index = 0;
     var sizelist = ds_priority_size(listtoserve);
     if carrying < sizelist {

@@ -90,8 +90,8 @@ if fade &lt;= 0 {
 
 draw_self();
 
-if global.isfading {
-    image_alpha = global.fadealpha;
+if obj_controller_main_menu.isfading {
+    image_alpha = obj_controller_main_menu.fadealpha;
 } else {
     image_alpha = fade;   
 }

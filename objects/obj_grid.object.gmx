@@ -32,10 +32,10 @@ var cell_height = 32;
 var hcells = room_width div cell_width;
 var vcells = room_height div cell_height;
 
-global.grid = mp_grid_create(0, 0, hcells, vcells, cell_width, cell_height);
+grid = mp_grid_create(0, 0, hcells, vcells, cell_width, cell_height);
 
-mp_grid_add_instances(global.grid, obj_wall_indesctructible, true);
-mp_grid_add_instances(global.grid, obj_occupy_grid, true);
+mp_grid_add_instances(grid, obj_wall_indesctructible, true);
+mp_grid_add_instances(grid, obj_occupy_grid, true);
 </string>
           </argument>
         </arguments>
@@ -60,7 +60,7 @@ mp_grid_add_instances(global.grid, obj_occupy_grid, true);
             <kind>1</kind>
             <string>/// Destroy the grid
 
-mp_grid_destroy(global.grid);
+mp_grid_destroy(grid);
 </string>
           </argument>
         </arguments>
@@ -85,11 +85,11 @@ mp_grid_destroy(global.grid);
             <kind>1</kind>
             <string>/// draw the grid
 
-if global.showgrid {
+if obj_controller.showgrid {
 
     draw_set_alpha(0.2);
     
-    mp_grid_draw(global.grid);
+    mp_grid_draw(grid);
     
     for (var i=0; i &lt; room_width ; i += 32;) {
          draw_line(i, 0, i , room_height);

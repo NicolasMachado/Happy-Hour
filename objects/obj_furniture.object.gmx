@@ -29,7 +29,7 @@
 draw_self();
 image_alpha = 1;
 
-if global.selecteditem == "bulldozer" {
+if obj_controller.selecteditem == "bulldozer" {
     var inst = collision_point(mouse_x, mouse_y, obj_furniture, false, false);
     if inst {
         with (inst) { image_alpha = 0.5; }

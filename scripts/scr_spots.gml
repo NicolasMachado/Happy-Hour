@@ -17,7 +17,7 @@ if action == "getbest" {
             spot = instance_find(obj, i);
             
             // if accessible...
-            if spot.activated && mp_grid_path(global.grid, global.spawner.path, global.spawner.x, global.spawner.y, spot.x+16, spot.y+16, 1) {
+            if spot.activated && mp_grid_path(obj_grid.grid, obj_controller.spawner.path, obj_controller.spawner.x, obj_controller.spawner.y, spot.x+16, spot.y+16, 1) {
                 if !spot.reachable {
                     spot.reachable = 1;
                 }
@@ -29,7 +29,7 @@ if action == "getbest" {
                     else if (obj == obj_server_table_spot && spot.tableID == customertoserve.myseat.tableID) { ds_priority_add(listspots, spot, -distance_to_object(spot)); }
                 }
             } 
-            if !mp_grid_path(global.grid, global.spawner.path, global.spawner.x, global.spawner.y, spot.x+16, spot.y+16, 1) {
+            if !mp_grid_path(obj_grid.grid, obj_controller.spawner.path, obj_controller.spawner.x, obj_controller.spawner.y, spot.x+16, spot.y+16, 1) {
                 countunreachable += 1;
                 if spot.reachable {
                     spot.reachable = 0;
@@ -47,20 +47,20 @@ if action == "getbest" {
     
     // UPDATE GLOBALS
     if obj == obj_seat {
-        global.nbseats = nbspots - countunreachable;
-        global.unreachableseats = countunreachable;
-        global.nboccseats = global.nbseats - size;
-        global.nbfreeseats = size;
+        obj_controller.nbseats = nbspots - countunreachable;
+        obj_controller.unreachableseats = countunreachable;
+        obj_controller.nboccseats = obj_controller.nbseats - size;
+        obj_controller.nbfreeseats = size;
     } else if obj == obj_toilet_front  {
-        global.nbtoiletseats = nbspots - countunreachable;
-        global.unreachabletoiletseats = countunreachable;
-        global.nbocctseats = global.nbtoiletseats - size;
-        global.nbfreetseats = size; 
+        obj_controller.nbtoiletseats = nbspots - countunreachable;
+        obj_controller.unreachabletoiletseats = countunreachable;
+        obj_controller.nbocctseats = obj_controller.nbtoiletseats - size;
+        obj_controller.nbfreetseats = size; 
     } else if obj == obj_server_bar_spot  {
-        global.nbbarspots = nbspots - countunreachable;
-        global.unreachablebarspots = countunreachable;
-        global.nboccbarspots = global.nbbarspots - size;
-        global.nbfreebarspots = size; 
+        obj_controller.nbbarspots = nbspots - countunreachable;
+        obj_controller.unreachablebarspots = countunreachable;
+        obj_controller.nboccbarspots = obj_controller.nbbarspots - size;
+        obj_controller.nbfreebarspots = size; 
     }  
     return bestavspot;
 }
@@ -69,8 +69,8 @@ if action == "getbest" {
 if action == "update" {
     if nbspots == 0 {
         if obj == obj_seat {
-            global.nboccseats = 0;
-            global.nbfreeseats = 0;
+            obj_controller.nboccseats = 0;
+            obj_controller.nbfreeseats = 0;
         }
         
     } else {
@@ -81,7 +81,7 @@ if action == "update" {
         for (i = 0; i < nbspots; i++) {
             var spot = instance_find(obj, i);
             // if reachable...
-            if mp_grid_path(global.grid, global.spawner.path, global.spawner.x, global.spawner.y, spot.x+16, spot.y+16, 1) {
+            if mp_grid_path(obj_grid.grid, obj_controller.spawner.path, obj_controller.spawner.x, obj_controller.spawner.y, spot.x+16, spot.y+16, 1) {
                 if !spot.reachable {
                     spot.reachable = 1;
                 }
@@ -103,20 +103,20 @@ if action == "update" {
 
     // UPDATE GLOBALS    
     if obj == obj_seat {
-        global.nbseats = nbspots - countunreachable;
-        global.unreachableseats = countunreachable;
-        global.nboccseats = global.nbseats - size;
-        global.nbfreeseats = size; 
+        obj_controller.nbseats = nbspots - countunreachable;
+        obj_controller.unreachableseats = countunreachable;
+        obj_controller.nboccseats = obj_controller.nbseats - size;
+        obj_controller.nbfreeseats = size; 
     } else if obj == obj_toilet_front  {
-        global.nbtoiletseats = nbspots - countunreachable;
-        global.unreachabletoiletseats = countunreachable;
-        global.nbocctseats = global.nbtoiletseats - size;
-        global.nbfreetseats = size; 
+        obj_controller.nbtoiletseats = nbspots - countunreachable;
+        obj_controller.unreachabletoiletseats = countunreachable;
+        obj_controller.nbocctseats = obj_controller.nbtoiletseats - size;
+        obj_controller.nbfreetseats = size; 
     } else if obj == obj_server_bar_spot  {
-        global.nbbarspots = nbspots - countunreachable;
-        global.unreachablebarspots = countunreachable;
-        global.nboccbarspots = global.nbbarspots - size;
-        global.nbfreebarspots = size; 
+        obj_controller.nbbarspots = nbspots - countunreachable;
+        obj_controller.unreachablebarspots = countunreachable;
+        obj_controller.nboccbarspots = obj_controller.nbbarspots - size;
+        obj_controller.nbfreebarspots = size; 
     }  
     exit;
 }

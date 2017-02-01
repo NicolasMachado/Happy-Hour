@@ -74,7 +74,7 @@ with (instance_create(x-100, y-100, obj_touch_box)) {
             <string>/// destroy
 
 if myid == 4 {
-    global.money += 5000;
+    obj_controller.money += 5000;
 }
 
 MESSAGE = -1;
@@ -102,7 +102,11 @@ scr_UI_message_box("next");
           <argument>
             <kind>1</kind>
             <string>///delayed start to get correct vars from "with" event
-draw_set_font(UI);
+if global.lowres {
+    draw_set_font(UI);
+} else {
+    draw_set_font(UI_big);    
+}
 start = true;
 length = string_length(originaltring);
 middle = y+(height/2);
@@ -180,7 +184,11 @@ if start {
         }
     } 
     // draw text
+if global.lowres {
     draw_set_font(UI);
+} else {
+    draw_set_font(UI_big);    
+}
     draw_set_colour(c_white);
     draw_text(x, y, mystring);
 }

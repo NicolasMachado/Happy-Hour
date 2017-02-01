@@ -3,22 +3,22 @@
 var objtocreate = argument0;
 
 // if the cells are free
-if (global.placeable && !position_meeting(mouse_x, mouse_y, obj_button)) {
+if (obj_controller.placeable && !position_meeting(mouse_x, mouse_y, obj_button)) {
 
     // create the instance at snap place
     instance_create(sprx, spry, objtocreate);
     audio_play_sound(snd_thomp, 1, false);
     
     // add all similar instances to grid if furniture
-    mp_grid_add_instances(global.grid, objtocreate, true);
+    mp_grid_add_instances(obj_grid.grid, objtocreate, true);
     
     // reset/start all customers paths
     /* ****** OLD CODE
-    if !global.gamepause {
+    if !obj_controller.gamepause {
         with (obj_customer) {
             if moving && !collision_rectangle(x-30, y-30, x+30, y+30, obj_toilet_spot, false, false) {
                 path_end();
-                if (mp_grid_path(global.grid, path, x, y, goal.x+16, goal.y+16, 1)){
+                if (mp_grid_path(obj_grid.grid, path, x, y, goal.x+16, goal.y+16, 1)){
                     path_start(path, spd, path_action_stop, true);
                 // if path doesn't exist
                 } else {

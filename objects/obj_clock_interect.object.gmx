@@ -55,7 +55,7 @@ alarm[0] = room_speed/2;
           <argument>
             <kind>1</kind>
             <string>/// update wtutation
-var wt = global.avgwaitingtime;
+var wt = obj_controller.avgwaitingtime;
 var flavortxt = "";
 
 // flavor text
@@ -66,7 +66,7 @@ if wt == 0 {
 } else if wt &gt;= 3 &amp;&amp; wt &lt; 6 {
     flavortxt = "Your customers are fine with their current waiting time."; 
 } else if wt &gt;= 6 &amp;&amp; wt &lt; 9 {
-    flavortxt = "Your customers are waiting for too long.#Maybe you need more trained waiters or more bathrrom stalls.";  
+    flavortxt = "Your customers are waiting for too long.#Maybe you need more trained waiters or more bathroom stalls.";  
 } else if wt &gt;= 9 {
     flavortxt = "Is anyone taking care of your customers at all?#Fix this issue as soon as possible.";  
 }

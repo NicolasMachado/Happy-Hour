@@ -1,6 +1,6 @@
 ///scr_state_none()
 
-if !global.gamepause {
+if !obj_controller.gamepause {
     // if stuck
     if iam = "customer" && prevx == x && prevy == y {
         stuckcounter += 1;

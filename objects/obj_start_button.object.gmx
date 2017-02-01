@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_button_UI</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,8 +27,51 @@
             <kind>1</kind>
             <string>/// INIT
 
+if global.lowres {
+    scale = .7;
+} else {
+    scale = 1;
+}
+
+medalspositionx = x+235*scale;
+medalspositiony = y+55*scale;
+ecart = 30;
+
 fading = false;
 hovercolor = make_color_rgb(230, 230, 240);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// hover
+
+if locked {
+    image_index = 0;
+} else {
+    if collision_point(mouse_x, mouse_y, self, false, false) || obj_controller_main_menu.selectedroom == rm {
+        image_index = 1;
+    } else {
+        image_index = lv+1;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -51,12 +94,43 @@ hovercolor = make_color_rgb(230, 230, 240);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// fade out
-if !global.isfading{
-    audio_play_sound(snd_menu_click, 1, 0); 
+            <string>/// select room
+if !locked {
+    obj_controller_main_menu.selectedroom = rm;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// fade out
 
-global.isfading = true;
+if !locked {
+    if !obj_controller_main_menu.isfading{
+        audio_play_sound(snd_menu_click, 1, 0); 
+    }
+    
+    obj_controller_main_menu.isfading = true;
+} else {
+    if !obj_controller_main_menu.isfading{
+        audio_play_sound(snd_menu_wrong, 1, 0); 
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -89,7 +163,20 @@ if collision_point(mouse_x, mouse_y, self, false, false) {
     image_blend = c_white;
 }
 
-image_alpha = global.fadealpha;
+image_alpha = obj_controller_main_menu.fadealpha;
+
+
+// display medals
+if gold {
+    draw_sprite_ext(spr_medals_mmenu, gold, medalspositionx, medalspositiony, 1, 1, 0, c_white, obj_controller_main_menu.fadealpha);
+    draw_sprite_ext(spr_medals_mmenu, bronze, medalspositionx + 2, medalspositiony+2, 1, 1, 0, c_black, obj_controller_main_menu.fadealpha - .8);
+} else if  silver {
+    draw_sprite_ext(spr_medals_mmenu, silver, medalspositionx, medalspositiony, 1, 1, 0, c_white, obj_controller_main_menu.fadealpha);
+    draw_sprite_ext(spr_medals_mmenu, bronze, medalspositionx + 2, medalspositiony+2, 1, 1, 0, c_black, obj_controller_main_menu.fadealpha - .8);
+} else if bronze {
+    draw_sprite_ext(spr_medals_mmenu, bronze, medalspositionx, medalspositiony, 1, 1, 0, c_white, obj_controller_main_menu.fadealpha);
+    draw_sprite_ext(spr_medals_mmenu, bronze, medalspositionx + 2, medalspositiony+2, 1, 1, 0, c_black, obj_controller_main_menu.fadealpha - .8);
+}
 </string>
           </argument>
         </arguments>
